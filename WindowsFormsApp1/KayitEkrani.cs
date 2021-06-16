@@ -28,6 +28,7 @@ namespace WindowsFormsApp1
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+
             baglanti.Open();    //store proc
             SqlCommand komut = new SqlCommand(
              "insert into tblUsers( UserName,UserSurName,UserLogin_Name,User_TC_Number,Tel_Number,Address,E_Mail,Password)" +
