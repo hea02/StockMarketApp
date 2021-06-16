@@ -23,7 +23,9 @@ namespace WindowsFormsApp1
         SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-7GMMT8H;Initial Catalog=Projets;Integrated Security=True");
         private void Hareketler_Load(object sender, EventArgs e)
         {
-           
+            // TODO: Bu kod satırı 'projetsDataSet.tblProduct2' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            this.tblProduct2TableAdapter.Fill(this.projetsDataSet.tblProduct2);
+
 
         }
         private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

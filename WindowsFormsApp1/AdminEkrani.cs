@@ -26,7 +26,11 @@ namespace WindowsFormsApp1
 
         private void AdminEkrani_Load(object sender, EventArgs e)
         {
-           
+            // TODO: Bu kod satırı 'projetsDataSet.AdminMoney' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            this.adminMoneyTableAdapter.Fill(this.projetsDataSet.AdminMoney);
+            // TODO: Bu kod satırı 'projetsDataSet.tblProduct' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            this.tblProductTableAdapter.Fill(this.projetsDataSet.tblProduct);
+
 
         }
 
