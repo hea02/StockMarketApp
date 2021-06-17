@@ -408,7 +408,7 @@ namespace WindowsFormsApp1
             this.guna2GradientButton3.Size = new System.Drawing.Size(172, 36);
             this.guna2GradientButton3.TabIndex = 47;
             this.guna2GradientButton3.Text = "DÖNÜŞTÜR";
-            this.guna2GradientButton3.Click += new System.EventHandler(this.guna2GradientButton3_Click);
+          //  this.guna2GradientButton3.Click += new System.EventHandler(this.guna2GradientButton3_Click);
             // 
             // lbldolar
             // 
