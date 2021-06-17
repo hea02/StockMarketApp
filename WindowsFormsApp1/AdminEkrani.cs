@@ -77,8 +77,8 @@ namespace WindowsFormsApp1
             SqlCommand komut = new SqlCommand(@"insert into tblProduct2 (ProductName,ProductAmount,ProductPrice,UserID) 
             values(@productName,@productAmount,@productPrice,@userID)", baglanti);
             komut.Parameters.AddWithValue("@productName", lblAdi.Text);
-            komut.Parameters.AddWithValue("@productAmount", Convert.ToInt32(lblUrunMiktar.Text));
-            komut.Parameters.AddWithValue("@productPrice", Convert.ToInt32(lblurunFiyati.Text));
+            komut.Parameters.AddWithValue("@productAmount", Convert.ToSingle(lblUrunMiktar.Text));
+            komut.Parameters.AddWithValue("@productPrice", Convert.ToSingle(lblurunFiyati.Text));
             komut.Parameters.AddWithValue("@userID", Convert.ToInt32(lblid.Text));
             komut.ExecuteNonQuery();
         
@@ -118,7 +118,7 @@ namespace WindowsFormsApp1
                 SqlCommand komut2 = new SqlCommand(@"
                 insert into tblAdminMoney2 (MoneyAmount,UserID) 
                 values(@moneyAmount,@userID)", baglanti);
-                komut2.Parameters.AddWithValue("@moneyAmount", Convert.ToInt32(lblup.Text));
+                komut2.Parameters.AddWithValue("@moneyAmount", Convert.ToSingle(lblup.Text));
                 komut2.Parameters.AddWithValue("@userID", Convert.ToInt32(lblua.Text));
                 komut2.ExecuteNonQuery();
                 MessageBox.Show("Onay İşlemi Gerçekleşti.");

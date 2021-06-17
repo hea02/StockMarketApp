@@ -14,7 +14,7 @@ namespace WindowsFormsApp1
     public partial class Hareketler : Form
     {
         int ui;
-        int bakiye = 0;
+        float bakiye = 0;
         public Hareketler(int userId)
         {
             ui = userId;
@@ -38,7 +38,8 @@ namespace WindowsFormsApp1
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             // alici bilgi alma işlemleri
-            int bakiye, urunId;
+            float bakiye;
+             int urunId;
            
 
             baglanti.Close();
@@ -51,7 +52,7 @@ namespace WindowsFormsApp1
             
             if (oku.Read())
             {
-                bakiye = Convert.ToInt32(oku["MoneyAmount"]);
+                bakiye = Convert.ToSingle(oku["MoneyAmount"]);
                 //MessageBox.Show("alıcı bakiye:" + bakiye);
                 oku.Close();
                 if (bakiye < Convert.ToInt32(lblSaticiTutar.Text))
@@ -133,7 +134,7 @@ namespace WindowsFormsApp1
                         com.Parameters.AddWithValue("@productID", urunId);
                         com.ExecuteNonQuery();
                         // tablonun güncel versiyonunu gösterme
-                 //       this.tblProduct2TableAdapter.Fill(this.projetsDataSet.tblProduct2);
+                     //       this.tblProduct2TableAdapter.Fill(this.projetsDataSet.tblProduct2);
 
                     }
                     else
@@ -165,7 +166,7 @@ namespace WindowsFormsApp1
 
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int urunMiktar, urunFiyat;
+            float urunMiktar, urunFiyat;
             if (guna2DataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
                 guna2DataGridView1.CurrentRow.Selected = true;
@@ -174,27 +175,13 @@ namespace WindowsFormsApp1
                 lblSaticiUrunMiktar.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["productAmountDataGridViewTextBoxColumn"].FormattedValue.ToString();
                 lblSaticiFiyat.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["productPriceDataGridViewTextBoxColumn"].FormattedValue.ToString();
 
-                urunFiyat = Convert.ToInt32(lblSaticiFiyat.Text);
-                urunMiktar = Convert.ToInt32(lblSaticiUrunMiktar.Text);
+                urunFiyat = Convert.ToSingle(lblSaticiFiyat.Text);
+                urunMiktar = Convert.ToSingle(lblSaticiUrunMiktar.Text);
 
                 lblSaticiTutar.Text = (urunMiktar * urunFiyat).ToString();
 
             }
         }
 
-        // miktar= fiyat x miktar burayı hesapla
-        //tutar labelina yazdir
-        //ondan sonra bakiyeyle karşılastır ona göre işlem yapılamaz de yada işlem gerçeklesşti de
-        //gerçekleşmişsse ürünü sil
-        //bakiyeyi düüşürüp tekrardan update et adminmoney2 tabelinda
-        //yukarda yaptığım bakiyeyi çekmede yanlış olabilir bi çok şeye baktımda yinede sen kontrol et
-        //numlardan başka insert ederken felan sql de int olana text(string) olarak felan yapmaya çalışılan vardı sanki diğer formlarda h
-
-        //tutarla bakiye karşılaştırılıp uygunsa alışverişine izin verilecek
-        //bakiyeden tutar düşülecek
-        // *** miktar olayı
-        //ürün silenecek
-        //message boxla alındı denecek
-        // zaman kalırsa hareket tablosu yapacağız
     }
 }

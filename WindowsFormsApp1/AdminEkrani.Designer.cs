@@ -37,6 +37,12 @@ namespace WindowsFormsApp1
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.moneyIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stateDataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.adminMoneyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.projetsDataSet = new WindowsFormsApp1.ProjetsDataSet();
             this.lblua = new System.Windows.Forms.Label();
             this.lblup = new System.Windows.Forms.Label();
             this.lblAdi = new System.Windows.Forms.Label();
@@ -51,6 +57,13 @@ namespace WindowsFormsApp1
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2DataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productNameDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stateDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblProductBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -62,28 +75,15 @@ namespace WindowsFormsApp1
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.projetsDataSet = new WindowsFormsApp1.ProjetsDataSet();
-            this.tblProductBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblProductTableAdapter = new WindowsFormsApp1.ProjetsDataSetTableAdapters.tblProductTableAdapter();
-            this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productNameDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stateDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adminMoneyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.adminMoneyTableAdapter = new WindowsFormsApp1.ProjetsDataSetTableAdapters.AdminMoneyTableAdapter();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.moneyIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stateDataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView2)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.projetsDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblProductBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminMoneyBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projetsDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblProductBindingSource)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -128,6 +128,44 @@ namespace WindowsFormsApp1
             this.dataGridView1.Size = new System.Drawing.Size(373, 191);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridUrunOnay_CellClick);
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "UserID";
+            this.dataGridViewTextBoxColumn6.HeaderText = "UserID";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // moneyIDDataGridViewTextBoxColumn
+            // 
+            this.moneyIDDataGridViewTextBoxColumn.DataPropertyName = "MoneyID";
+            this.moneyIDDataGridViewTextBoxColumn.HeaderText = "MoneyID";
+            this.moneyIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.moneyIDDataGridViewTextBoxColumn.Name = "moneyIDDataGridViewTextBoxColumn";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Money";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Money";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // stateDataGridViewCheckBoxColumn1
+            // 
+            this.stateDataGridViewCheckBoxColumn1.DataPropertyName = "State";
+            this.stateDataGridViewCheckBoxColumn1.HeaderText = "State";
+            this.stateDataGridViewCheckBoxColumn1.MinimumWidth = 6;
+            this.stateDataGridViewCheckBoxColumn1.Name = "stateDataGridViewCheckBoxColumn1";
+            // 
+            // adminMoneyBindingSource
+            // 
+            this.adminMoneyBindingSource.DataMember = "AdminMoney";
+            this.adminMoneyBindingSource.DataSource = this.projetsDataSet;
+            // 
+            // projetsDataSet
+            // 
+            this.projetsDataSet.DataSetName = "ProjetsDataSet";
+            this.projetsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblua
             // 
@@ -237,7 +275,7 @@ namespace WindowsFormsApp1
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
             this.guna2ControlBox1.Location = new System.Drawing.Point(1041, -1);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.Size = new System.Drawing.Size(60, 36);
@@ -322,6 +360,54 @@ namespace WindowsFormsApp1
             this.guna2DataGridView2.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.guna2DataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView2_CellClick);
             // 
+            // productIDDataGridViewTextBoxColumn
+            // 
+            this.productIDDataGridViewTextBoxColumn.DataPropertyName = "ProductID";
+            this.productIDDataGridViewTextBoxColumn.HeaderText = "ProductID";
+            this.productIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
+            this.productIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // productNameDataGridViewTextBoxColumn3
+            // 
+            this.productNameDataGridViewTextBoxColumn3.DataPropertyName = "ProductName";
+            this.productNameDataGridViewTextBoxColumn3.HeaderText = "ProductName";
+            this.productNameDataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.productNameDataGridViewTextBoxColumn3.Name = "productNameDataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "ProductAmount";
+            this.dataGridViewTextBoxColumn3.HeaderText = "ProductAmount";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "ProductPrice";
+            this.dataGridViewTextBoxColumn4.HeaderText = "ProductPrice";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // stateDataGridViewCheckBoxColumn
+            // 
+            this.stateDataGridViewCheckBoxColumn.DataPropertyName = "State";
+            this.stateDataGridViewCheckBoxColumn.HeaderText = "State";
+            this.stateDataGridViewCheckBoxColumn.MinimumWidth = 6;
+            this.stateDataGridViewCheckBoxColumn.Name = "stateDataGridViewCheckBoxColumn";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "UserID";
+            this.dataGridViewTextBoxColumn5.HeaderText = "UserID";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // tblProductBindingSource
+            // 
+            this.tblProductBindingSource.DataMember = "tblProduct";
+            this.tblProductBindingSource.DataSource = this.projetsDataSet;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.guna2DataGridView2);
@@ -405,7 +491,7 @@ namespace WindowsFormsApp1
             this.guna2Button3.HoverState.Parent = this.guna2Button3;
             this.guna2Button3.Image = global::WindowsFormsApp1.Properties.Resources.ONAY;
             this.guna2Button3.Location = new System.Drawing.Point(752, 407);
-            this.guna2Button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Button3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
             this.guna2Button3.Size = new System.Drawing.Size(127, 26);
@@ -423,7 +509,7 @@ namespace WindowsFormsApp1
             this.guna2Button2.HoverState.Parent = this.guna2Button2;
             this.guna2Button2.Image = global::WindowsFormsApp1.Properties.Resources.ONAY;
             this.guna2Button2.Location = new System.Drawing.Point(211, 407);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
             this.guna2Button2.Size = new System.Drawing.Size(127, 26);
@@ -441,7 +527,7 @@ namespace WindowsFormsApp1
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
             this.guna2Button1.Image = global::WindowsFormsApp1.Properties.Resources.geriiiiiii;
             this.guna2Button1.Location = new System.Drawing.Point(-1, -1);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(69, 28);
@@ -459,7 +545,7 @@ namespace WindowsFormsApp1
             this.guna2Button4.HoverState.Parent = this.guna2Button4;
             this.guna2Button4.Image = global::WindowsFormsApp1.Properties.Resources.ürün;
             this.guna2Button4.Location = new System.Drawing.Point(908, 427);
-            this.guna2Button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Button4.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.ShadowDecoration.Parent = this.guna2Button4;
             this.guna2Button4.Size = new System.Drawing.Size(116, 26);
@@ -467,99 +553,13 @@ namespace WindowsFormsApp1
             this.guna2Button4.Text = "Hareket";
             this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
-            // projetsDataSet
-            // 
-            this.projetsDataSet.DataSetName = "ProjetsDataSet";
-            this.projetsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblProductBindingSource
-            // 
-            this.tblProductBindingSource.DataMember = "tblProduct";
-            this.tblProductBindingSource.DataSource = this.projetsDataSet;
-            // 
             // tblProductTableAdapter
             // 
             this.tblProductTableAdapter.ClearBeforeFill = true;
             // 
-            // productIDDataGridViewTextBoxColumn
-            // 
-            this.productIDDataGridViewTextBoxColumn.DataPropertyName = "ProductID";
-            this.productIDDataGridViewTextBoxColumn.HeaderText = "ProductID";
-            this.productIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
-            this.productIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // productNameDataGridViewTextBoxColumn3
-            // 
-            this.productNameDataGridViewTextBoxColumn3.DataPropertyName = "ProductName";
-            this.productNameDataGridViewTextBoxColumn3.HeaderText = "ProductName";
-            this.productNameDataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.productNameDataGridViewTextBoxColumn3.Name = "productNameDataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "ProductAmount";
-            this.dataGridViewTextBoxColumn3.HeaderText = "ProductAmount";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "ProductPrice";
-            this.dataGridViewTextBoxColumn4.HeaderText = "ProductPrice";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // stateDataGridViewCheckBoxColumn
-            // 
-            this.stateDataGridViewCheckBoxColumn.DataPropertyName = "State";
-            this.stateDataGridViewCheckBoxColumn.HeaderText = "State";
-            this.stateDataGridViewCheckBoxColumn.MinimumWidth = 6;
-            this.stateDataGridViewCheckBoxColumn.Name = "stateDataGridViewCheckBoxColumn";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "UserID";
-            this.dataGridViewTextBoxColumn5.HeaderText = "UserID";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // adminMoneyBindingSource
-            // 
-            this.adminMoneyBindingSource.DataMember = "AdminMoney";
-            this.adminMoneyBindingSource.DataSource = this.projetsDataSet;
-            // 
             // adminMoneyTableAdapter
             // 
             this.adminMoneyTableAdapter.ClearBeforeFill = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "UserID";
-            this.dataGridViewTextBoxColumn6.HeaderText = "UserID";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // moneyIDDataGridViewTextBoxColumn
-            // 
-            this.moneyIDDataGridViewTextBoxColumn.DataPropertyName = "MoneyID";
-            this.moneyIDDataGridViewTextBoxColumn.HeaderText = "MoneyID";
-            this.moneyIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.moneyIDDataGridViewTextBoxColumn.Name = "moneyIDDataGridViewTextBoxColumn";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Money";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Money";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // stateDataGridViewCheckBoxColumn1
-            // 
-            this.stateDataGridViewCheckBoxColumn1.DataPropertyName = "State";
-            this.stateDataGridViewCheckBoxColumn1.HeaderText = "State";
-            this.stateDataGridViewCheckBoxColumn1.MinimumWidth = 6;
-            this.stateDataGridViewCheckBoxColumn1.Name = "stateDataGridViewCheckBoxColumn1";
             // 
             // AdminEkrani
             // 
@@ -593,11 +593,11 @@ namespace WindowsFormsApp1
             this.Load += new System.EventHandler(this.AdminEkrani_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView2)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.projetsDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblProductBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminMoneyBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projetsDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblProductBindingSource)).EndInit();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
