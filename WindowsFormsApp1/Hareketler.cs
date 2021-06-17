@@ -20,11 +20,13 @@ namespace WindowsFormsApp1
             ui = userId;
             InitializeComponent();
         }
-        SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-7GMMT8H;Initial Catalog=Projets;Integrated Security=True");
+        SqlConnection baglanti = new SqlConnection(@"Data Source=desktop-6LL8GP9;Initial Catalog=Projets;Integrated Security=True");
         private void Hareketler_Load(object sender, EventArgs e)
         {
-            // TODO: Bu kod satırı 'projetsDataSet.tblProduct2' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            // TODO: This line of code loads data into the 'projetsDataSet.tblProduct2' table. You can move, or remove it, as needed.
             this.tblProduct2TableAdapter.Fill(this.projetsDataSet.tblProduct2);
+            // TODO: Bu kod satırı 'projetsDataSet.tblProduct2' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            ///    this.tblProduct2TableAdapter.Fill(this.projetsDataSet.tblProduct2);
 
 
         }

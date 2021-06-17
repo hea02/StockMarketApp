@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
     {
         int userId;
         
-        SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-7GMMT8H;Initial Catalog=Projets;Integrated Security=True");
+        SqlConnection baglanti = new SqlConnection(@"Data Source=desktop-6LL8GP9;Initial Catalog=Projets;Integrated Security=True");
         public AdminEkrani()
         {
             
@@ -26,10 +26,14 @@ namespace WindowsFormsApp1
 
         private void AdminEkrani_Load(object sender, EventArgs e)
         {
-            // TODO: Bu kod satırı 'projetsDataSet.AdminMoney' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            // TODO: This line of code loads data into the 'projetsDataSet.AdminMoney' table. You can move, or remove it, as needed.
             this.adminMoneyTableAdapter.Fill(this.projetsDataSet.AdminMoney);
-            // TODO: Bu kod satırı 'projetsDataSet.tblProduct' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            // TODO: This line of code loads data into the 'projetsDataSet.tblProduct' table. You can move, or remove it, as needed.
             this.tblProductTableAdapter.Fill(this.projetsDataSet.tblProduct);
+            // TODO: Bu kod satırı 'projetsDataSet.AdminMoney' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            //  this.adminMoneyTableAdapter.Fill(this.projetsDataSet.AdminMoney);
+            // TODO: Bu kod satırı 'projetsDataSet.tblProduct' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            //  this.tblProductTableAdapter.Fill(this.projetsDataSet.tblProduct);
 
 
         }

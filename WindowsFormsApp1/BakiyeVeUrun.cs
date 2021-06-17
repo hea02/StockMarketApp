@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
     public partial class SaticiEkrani : Form
     {
         int userId;
-        SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-7GMMT8H;Initial Catalog=Projets;Integrated Security=True");
+        SqlConnection baglanti = new SqlConnection(@"Data Source=desktop-6LL8GP9;Initial Catalog=Projets;Integrated Security=True");
 
         //  string saticiMoney;
         public SaticiEkrani(int id)
@@ -80,6 +80,24 @@ namespace WindowsFormsApp1
 
             string dolaralis = xmldosya.SelectSingleNode("Tarih_Date/Currency[@Kod='USD']/BanknoteBuying").InnerXml;
             lbldolar.Text = dolaralis;
+        }
+
+        private void guna2GradientButton2_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            SqlCommand command = new SqlCommand(@"insert into tblBuying (ProductName,ProductAmount,ProductPrice,UserID) 
+            values(@productName,@productAmount,@productPrice,@userID)", baglanti);
+            command.Parameters.AddWithValue("@userID", userId);
+            command.Parameters.AddWithValue("@productName", txtAdi.Text);
+            command.Parameters.AddWithValue("@productAmount", txtMiktar.Text);
+            command.Parameters.AddWithValue("@productPrice", txtFiyat.Text);
+            command.ExecuteNonQuery();
+            MessageBox.Show("Ürün Admin onayına gönderildi onaylandıktan sonra yayınlacaktır!");
+            baglanti.Close();
+            txtAdi.Text = "";
+            txtMiktar.Text = "";
+            txtFiyat.Text = "";
+
         }
     }
 }
