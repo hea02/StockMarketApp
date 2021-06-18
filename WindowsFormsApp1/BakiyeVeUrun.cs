@@ -279,13 +279,6 @@ namespace WindowsFormsApp1
 
         private void guna2GradientButton3_Click(object sender, EventArgs e)
         {
-            int dlr;
-            dlr = Convert.ToInt32(lbldolar.Text);
-            int miktar;
-            miktar = Convert.ToInt32(txtdolar.Text);
-            int tutar;
-            tutar = dlr * miktar;
-            txtBakiye.Text = Convert.ToString(tutar);
         }
     }
 }
