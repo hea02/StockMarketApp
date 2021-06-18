@@ -93,68 +93,78 @@ namespace WindowsFormsApp1
 
         private void SaticiEkrani_Load(object sender, EventArgs e)
         {
-            string bugun = "https://www.tcmb.gov.tr/kurlar/today.xml";
-            var xmldosya = new XmlDocument();
-            xmldosya.Load(bugun);
+            //string bugun = "https://www.tcmb.gov.tr/kurlar/today.xml";
+            //var xmldosya = new XmlDocument();
+            //xmldosya.Load(bugun);
 
-            string dolaralis = xmldosya.SelectSingleNode("Tarih_Date/Currency[@Kod='USD']/BanknoteBuying").InnerXml;
-            lbldolar.Text = dolaralis;
+            //string dolaralis = xmldosya.SelectSingleNode("Tarih_Date/Currency[@Kod='USD']/BanknoteBuying").InnerXml;
+            //lbldolar.Text = dolaralis;
         }
-
+        float guncelAliciBakiye=0, guncelSaticiBakiye=0;
         private void guna2GradientButton2_Click(object sender, EventArgs e)
         {
             int  urunId,saticiId;
-            float urunTutar, aliciBakiye,saticiBakiye;
+            float urunTutar, aliciBakiye;
+             float saticiBakiye,stcBakiye;
+           
             baglanti.Open();
-            SqlCommand command = new SqlCommand(@"insert into tblBuying (productName,ProductAmount,ProductPrice,UserID) 
-            values(@productName,@productAmount,@productPrice,@userID)", baglanti);
-            command.Parameters.AddWithValue("@userID", userId);
+            SqlCommand command = new SqlCommand(@"insert into tblBuying (productName,ProductAmount,ProductPrice) 
+            values(@productName,@productAmount,@productPrice)", baglanti);
+            //command.Parameters.AddWithValue("@userID", userId);
             command.Parameters.AddWithValue("@productName", txtUrunAdi.Text);
             command.Parameters.AddWithValue("@productAmount", txtUrunMiktar.Text);
             command.Parameters.AddWithValue("@productPrice", txtUrunFiyati.Text);
             command.ExecuteNonQuery();
             MessageBox.Show("Urun sistemde varmı yok mu kontrol edılecektır");
-            baglanti.Close();
-            txtAdi.Text = "";
-            txtMiktar.Text = "";
-            txtFiyat.Text = "";
+ 
             SqlCommand komut = new SqlCommand("select UserID , ProductAmount* ProductPrice as UrunTutar From tblProduct2 where productName=@productName and ProductAmount=@productAmount and  ProductPrice=@productPrice", baglanti);
             komut.Parameters.AddWithValue("@productName", txtUrunAdi.Text);
             komut.Parameters.AddWithValue("@productAmount", Convert.ToSingle(txtUrunMiktar.Text));
             komut.Parameters.AddWithValue("@productPrice", Convert.ToSingle(txtUrunFiyati.Text));
-
             SqlDataReader dr = komut.ExecuteReader();
+            //txtAdi.Text = "";
+            //txtMiktar.Text = "";
+            //txtFiyat.Text = "";
             if (dr.Read())
             {
 
                 saticiId = Convert.ToInt32(dr["UserID"]);
                 MessageBox.Show("satici id =" + saticiId);
                 MessageBox.Show("al sat işlemi yapılabilinir urun bulundu");
-
-                dr.Read();
+                urunTutar = Convert.ToSingle(dr["UrunTutar"]);
+                dr.Close();
                 // alici bilgi alma işlemleri
                 
+               
+                //satıcı bakıye alma
+                SqlCommand veri = new SqlCommand(@"select MoneyAmount from tblAdminMoney2 where UserId= @userId", baglanti);
+                veri.Parameters.AddWithValue("@userId", saticiId);
+                veri.ExecuteNonQuery();
+                SqlDataReader dataReader = veri.ExecuteReader();
+                if (dataReader.Read())
+                {
+                    saticiBakiye = Convert.ToSingle(dataReader["MoneyAmount"]);
+                    MessageBox.Show("satici bakiye =" + saticiBakiye);
+                    stcBakiye = saticiBakiye;
+                    dataReader.Close();
+                }
+                else
+                {
+                    MessageBox.Show("satici bakiye okunamadı");
+                }
                 //alıcı bakıye alma
                 SqlCommand verioku = new SqlCommand(@"select MoneyAmount from tblAdminMoney2 where UserId= @userId", baglanti);
                 verioku.Parameters.AddWithValue("@userId", userId);
                 verioku.ExecuteNonQuery();
                 SqlDataReader oku = verioku.ExecuteReader();
-                //satıcı bakıye alma
-                SqlCommand verioku2 = new SqlCommand(@"select MoneyAmount from tblAdminMoney2 where UserId= @userId", baglanti);
-                verioku2.Parameters.AddWithValue("@userId", saticiId);
-                verioku2.ExecuteNonQuery();
-                SqlDataReader oku2 = verioku2.ExecuteReader();
-                if (oku2.Read())
-                {
-                    saticiBakiye = Convert.ToSingle(oku2["MoneyAmount"]);
-                    oku2.Close();
-                }
 
                 if (oku.Read())
                 {
                     aliciBakiye = Convert.ToSingle(oku["MoneyAmount"]);
-                    urunTutar = Convert.ToSingle(oku["UrunTutar"]);
+                    MessageBox.Show("alici bakiye =" + aliciBakiye);
+                    
                     //MessageBox.Show("alıcı bakiye:" + bakiye);
+                    MessageBox.Show("urun tutar  =" + urunTutar);
                     oku.Close();
                     
 
@@ -167,112 +177,107 @@ namespace WindowsFormsApp1
                     {
                        
                             SqlCommand komut2 = new SqlCommand(@"select ProductID from tblProduct2 where UserId= @userId", baglanti);
-                            komut2.Parameters.AddWithValue("@userId", userId);
+                            komut2.Parameters.AddWithValue("@userId", saticiId);
                             SqlDataReader veriokuma = komut2.ExecuteReader();
+
                             if (veriokuma.Read())
                             {
-                                urunId = Convert.ToInt32(veriokuma["ProductID"]);
-                                //MessageBox.Show(" satici id:" + Convert.ToInt32(lblSaticiId.Text));
-                                // MessageBox.Show("urun id:"+urunId);
+
+                            urunId = Convert.ToInt32(veriokuma["ProductID"]);
+                                MessageBox.Show(" satici id:" + saticiId);
+                                MessageBox.Show("alici id =" + userId);
+                               MessageBox.Show("urun id:"+urunId);
                                 veriokuma.Close();
-                                //alici bakiye düşme 
+                            MessageBox.Show(" Para transferi gercekleşiyor..." );
+                           
+                            //alici bakiye düşme 
+                            SqlCommand data1 = new SqlCommand(@"update tblAdminMoney2 set MoneyAmount = MoneyAmount - @money where UserID = @userID ", baglanti);
+                            data1.Parameters.AddWithValue("@Money", urunTutar);
+                            data1.Parameters.AddWithValue("@UserID", userId);
+                            data1.ExecuteNonQuery();
 
-                                SqlCommand data1 = new SqlCommand(@"update tblAdminMoney2 set MoneyAmount = MoneyAmount - @money where UserID = @userID ", baglanti);
-                                data1.Parameters.AddWithValue("@Money", urunTutar);
-                                data1.Parameters.AddWithValue("@UserID", userId);
-                                data1.ExecuteNonQuery();
+                            //satici bakiye artma 
+                            SqlCommand data2 = new SqlCommand(@"update tblAdminMoney2 set MoneyAmount = MoneyAmount + @money where UserID = @userID ", baglanti);
+                            data2.Parameters.AddWithValue("@Money", urunTutar);
+                            data2.Parameters.AddWithValue("@UserID", saticiId);
+                            data2.ExecuteNonQuery();
 
+                            veriokuma.Close();
 
-                                //satici bakiye artma 
+                            // güncel alici bakiye 
+                           
 
-                                SqlCommand data2 = new SqlCommand(@"update tblAdminMoney2 set MoneyAmount = MoneyAmount + @money where UserID = @userID ", baglanti);
-                                data2.Parameters.AddWithValue("@Money", urunTutar);
-                                data2.Parameters.AddWithValue("@UserID", saticiId);
-                                data2.ExecuteNonQuery();
+                            SqlCommand data3 = new SqlCommand(@"select MoneyAmount from tblAdminMoney2  where UserID = @userID ", baglanti);
+                            
+                            data3.Parameters.AddWithValue("@UserID", userId);
+                            data3.ExecuteNonQuery();
+                            SqlDataReader data3oku = data3.ExecuteReader();
+                            if (data3oku.Read())
+                            {
+                                guncelAliciBakiye = Convert.ToSingle(data3oku["MoneyAmount"]);
+                                MessageBox.Show(" güncel satici bakiye =" + guncelAliciBakiye);
+                                data3oku.Close();
+                            }
+                            MessageBox.Show("satici id" + saticiId);
+                            //güncel satici bakiye 
+                            SqlCommand data4 = new SqlCommand(@"select MoneyAmount from tblAdminMoney2  where UserID = @userID ", baglanti);
+                     
+                            data4.Parameters.AddWithValue("@UserID", saticiId);
+                            data4.ExecuteNonQuery();
+                            SqlDataReader data4oku = data4.ExecuteReader();
+                            if (data4oku.Read())
+                            {
+                                guncelSaticiBakiye = Convert.ToSingle(data4oku["MoneyAmount"]);
+                                MessageBox.Show(" güncel satici bakiye =" + guncelSaticiBakiye);
+                                data4oku.Close();
 
+                            }
 
-                            //// yeni bakiyeleri cekme
-
-                            //SqlCommand veri1 = new SqlCommand(@"select MoneyAmount from tblAdminMoney2 where UserId= @userId", baglanti);
-                            //veri1.Parameters.AddWithValue("@userId", Convert.ToInt32(lblSaticiId.Text));
-                            //veri1.ExecuteNonQuery();
-                            //SqlDataReader dr = veri1.ExecuteReader();
-                            //if (dr.Read())
-                            //{
-                            //    saticiBakiye = Convert.ToInt32(dr["MoneyAmount"]);
-                            //    //  MessageBox.Show("satici bakiye:" + saticiBakiye);
-                            //}
-                            //dr.Close();
-
-                            //SqlCommand veri2 = new SqlCommand(@"select MoneyAmount from tblAdminMoney2 where UserId= @userId", baglanti);
-                            //veri2.Parameters.AddWithValue("@userId", ui);
-                            //veri2.ExecuteNonQuery();
-                            //SqlDataReader data = veri2.ExecuteReader();
-                            //if (data.Read())
-                            //{
-                            //    aliciBakiye = Convert.ToInt32(data["MoneyAmount"]);
-                            //    // MessageBox.Show("alici bakiye:" + aliciBakiye);
-                            //}
-                            //data.Close();
-
-                            // hareketler tablosu 
-
-
-                                SqlCommand command2 = new SqlCommand(@"
+                            SqlCommand command2 = new SqlCommand(@"
                             insert into tblHareketler (AliciID,SaticiID,UrunID,AliciBakiye,SaticiBakiye)values(@aliciID,@saticiID,@urunID,@aliciBakiye,@saticiBakiye)", baglanti);
                                 command2.Parameters.AddWithValue("@aliciID", userId);
                                 command2.Parameters.AddWithValue("@saticiID", saticiId);
                                 command2.Parameters.AddWithValue("@urunID", urunId);
-                                command2.Parameters.AddWithValue("@aliciBakiye", aliciBakiye);
-                              // command2.Parameters.AddWithValue("@saticiBakiye", saticiBakiye);
+                                command2.Parameters.AddWithValue("@aliciBakiye", guncelAliciBakiye);
+                                command2.Parameters.AddWithValue("@saticiBakiye", guncelSaticiBakiye);
                                 command2.ExecuteNonQuery();
                                 MessageBox.Show("Alıcının Bakiyesinden"+urunTutar+" lira saticinin bakiyesine gönderilmiştir.");
-                                //MessageBox.Show(
-                                //"aliciID:" + ui +
-                                //"\nsaticiID:" + Convert.ToInt32(lblSaticiId.Text) +
-                                //"\nurunID:" + urunId +
-                                //"\naliciBakiye:" + aliciBakiye +
-                                //"\nsaticiBakiye:" + saticiBakiye);
+                            MessageBox.Show(
+                            "aliciID:" + userId +
+                            "\nsaticiID:" + saticiId +
+                            "\nurunID:" + urunId +
+                            "\naliciBakiye:" + guncelAliciBakiye +
+                            "\nsaticiBakiye:" + guncelSaticiBakiye);
 
-                                //// alınan ürünü satılanürün tablosundan silme
-                                SqlCommand com = new SqlCommand(@" delete from tblProduct2 where ProductID=@productID", baglanti);
-                                com.Parameters.AddWithValue("@productID", urunId);
-                                com.ExecuteNonQuery();
-                                // tablonun güncel versiyonunu gösterme yapılcak
-                                
+                            //// alınan ürünü satılanürün tablosundan silme
+                            //SqlCommand com = new SqlCommand(@" delete from tblProduct2 where ProductID=@productID", baglanti);
+                            //com.Parameters.AddWithValue("@productID", urunId);
+                            //com.ExecuteNonQuery();
+                            // tablonun güncel versiyonunu gösterme yapılcak
 
-                            }
+                            
+                        }
                             else
                             {
-                                MessageBox.Show("ProductId veri okunamadı");
+                                MessageBox.Show("ProductId verisi okunamadı");
                             }
                     }
-
-
-                  
-
 
                 }
                 else
                 {
-                    MessageBox.Show("Hic bir veri okunamadı...");
+                    MessageBox.Show("alıcı bakiye verisi okunamadı");
                 }
 
-
-
-
-
-
-
-                baglanti.Close();
-
             }
-          
             else
             {
                 MessageBox.Show("al sat işlemi yapılamaz urun bulunmadı");
 
             }
+
+
+            baglanti.Close();
 
 
         }
