@@ -71,7 +71,7 @@ namespace WindowsFormsApp1
             this.guna2GradientButton1.ForeColor = System.Drawing.Color.Black;
             this.guna2GradientButton1.HoverState.Parent = this.guna2GradientButton1;
             this.guna2GradientButton1.Location = new System.Drawing.Point(349, 268);
-            this.guna2GradientButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2GradientButton1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2GradientButton1.Name = "guna2GradientButton1";
             this.guna2GradientButton1.ShadowDecoration.Parent = this.guna2GradientButton1;
             this.guna2GradientButton1.Size = new System.Drawing.Size(168, 55);
@@ -97,7 +97,7 @@ namespace WindowsFormsApp1
             this.txtAdi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAdi.HoverState.Parent = this.txtAdi;
             this.txtAdi.Location = new System.Drawing.Point(349, 84);
-            this.txtAdi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAdi.Margin = new System.Windows.Forms.Padding(4);
             this.txtAdi.Name = "txtAdi";
             this.txtAdi.PasswordChar = '\0';
             this.txtAdi.PlaceholderForeColor = System.Drawing.Color.Yellow;
@@ -125,7 +125,7 @@ namespace WindowsFormsApp1
             this.txtFiyat.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFiyat.HoverState.Parent = this.txtFiyat;
             this.txtFiyat.Location = new System.Drawing.Point(349, 142);
-            this.txtFiyat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFiyat.Margin = new System.Windows.Forms.Padding(4);
             this.txtFiyat.Name = "txtFiyat";
             this.txtFiyat.PasswordChar = '\0';
             this.txtFiyat.PlaceholderForeColor = System.Drawing.Color.Yellow;
@@ -153,7 +153,7 @@ namespace WindowsFormsApp1
             this.txtBakiye.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBakiye.HoverState.Parent = this.txtBakiye;
             this.txtBakiye.Location = new System.Drawing.Point(580, 199);
-            this.txtBakiye.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBakiye.Margin = new System.Windows.Forms.Padding(4);
             this.txtBakiye.Name = "txtBakiye";
             this.txtBakiye.PasswordChar = '\0';
             this.txtBakiye.PlaceholderForeColor = System.Drawing.Color.Yellow;
@@ -170,7 +170,7 @@ namespace WindowsFormsApp1
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
             this.guna2ControlBox1.Location = new System.Drawing.Point(720, 0);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.Size = new System.Drawing.Size(60, 36);
@@ -194,7 +194,7 @@ namespace WindowsFormsApp1
             this.txtMiktar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMiktar.HoverState.Parent = this.txtMiktar;
             this.txtMiktar.Location = new System.Drawing.Point(349, 199);
-            this.txtMiktar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMiktar.Margin = new System.Windows.Forms.Padding(4);
             this.txtMiktar.Name = "txtMiktar";
             this.txtMiktar.PasswordChar = '\0';
             this.txtMiktar.PlaceholderForeColor = System.Drawing.Color.Yellow;
@@ -214,7 +214,7 @@ namespace WindowsFormsApp1
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
             this.guna2Button1.Image = global::WindowsFormsApp1.Properties.Resources.ürün;
             this.guna2Button1.Location = new System.Drawing.Point(632, 386);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(148, 32);
@@ -233,7 +233,7 @@ namespace WindowsFormsApp1
             this.guna2CircleButton1.HoverState.Parent = this.guna2CircleButton1;
             this.guna2CircleButton1.Image = global::WindowsFormsApp1.Properties.Resources.BAKİYE;
             this.guna2CircleButton1.Location = new System.Drawing.Point(632, 257);
-            this.guna2CircleButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CircleButton1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2CircleButton1.Name = "guna2CircleButton1";
             this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CircleButton1.ShadowDecoration.Parent = this.guna2CircleButton1;
@@ -252,7 +252,7 @@ namespace WindowsFormsApp1
             this.guna2Button2.HoverState.Parent = this.guna2Button2;
             this.guna2Button2.Image = global::WindowsFormsApp1.Properties.Resources.geriiiiiii;
             this.guna2Button2.Location = new System.Drawing.Point(-1, -1);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
             this.guna2Button2.Size = new System.Drawing.Size(69, 28);
@@ -278,7 +278,7 @@ namespace WindowsFormsApp1
             this.txtUrunMiktar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUrunMiktar.HoverState.Parent = this.txtUrunMiktar;
             this.txtUrunMiktar.Location = new System.Drawing.Point(99, 199);
-            this.txtUrunMiktar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUrunMiktar.Margin = new System.Windows.Forms.Padding(4);
             this.txtUrunMiktar.Name = "txtUrunMiktar";
             this.txtUrunMiktar.PasswordChar = '\0';
             this.txtUrunMiktar.PlaceholderForeColor = System.Drawing.Color.Yellow;
@@ -306,7 +306,7 @@ namespace WindowsFormsApp1
             this.txtUrunFiyati.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUrunFiyati.HoverState.Parent = this.txtUrunFiyati;
             this.txtUrunFiyati.Location = new System.Drawing.Point(99, 142);
-            this.txtUrunFiyati.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUrunFiyati.Margin = new System.Windows.Forms.Padding(4);
             this.txtUrunFiyati.Name = "txtUrunFiyati";
             this.txtUrunFiyati.PasswordChar = '\0';
             this.txtUrunFiyati.PlaceholderForeColor = System.Drawing.Color.Yellow;
@@ -334,7 +334,7 @@ namespace WindowsFormsApp1
             this.txtUrunAdi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUrunAdi.HoverState.Parent = this.txtUrunAdi;
             this.txtUrunAdi.Location = new System.Drawing.Point(99, 84);
-            this.txtUrunAdi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUrunAdi.Margin = new System.Windows.Forms.Padding(4);
             this.txtUrunAdi.Name = "txtUrunAdi";
             this.txtUrunAdi.PasswordChar = '\0';
             this.txtUrunAdi.PlaceholderForeColor = System.Drawing.Color.Yellow;
@@ -355,7 +355,7 @@ namespace WindowsFormsApp1
             this.buttonAlım.ForeColor = System.Drawing.Color.Black;
             this.buttonAlım.HoverState.Parent = this.buttonAlım;
             this.buttonAlım.Location = new System.Drawing.Point(99, 268);
-            this.buttonAlım.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonAlım.Margin = new System.Windows.Forms.Padding(4);
             this.buttonAlım.Name = "buttonAlım";
             this.buttonAlım.ShadowDecoration.Parent = this.buttonAlım;
             this.buttonAlım.Size = new System.Drawing.Size(168, 55);
@@ -381,7 +381,7 @@ namespace WindowsFormsApp1
             this.txtdolar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtdolar.HoverState.Parent = this.txtdolar;
             this.txtdolar.Location = new System.Drawing.Point(580, 84);
-            this.txtdolar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtdolar.Margin = new System.Windows.Forms.Padding(4);
             this.txtdolar.Name = "txtdolar";
             this.txtdolar.PasswordChar = '\0';
             this.txtdolar.PlaceholderForeColor = System.Drawing.Color.Yellow;
@@ -402,13 +402,13 @@ namespace WindowsFormsApp1
             this.guna2GradientButton3.ForeColor = System.Drawing.Color.Black;
             this.guna2GradientButton3.HoverState.Parent = this.guna2GradientButton3;
             this.guna2GradientButton3.Location = new System.Drawing.Point(588, 142);
-            this.guna2GradientButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2GradientButton3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2GradientButton3.Name = "guna2GradientButton3";
             this.guna2GradientButton3.ShadowDecoration.Parent = this.guna2GradientButton3;
             this.guna2GradientButton3.Size = new System.Drawing.Size(172, 36);
             this.guna2GradientButton3.TabIndex = 47;
             this.guna2GradientButton3.Text = "DÖNÜŞTÜR";
-          //  this.guna2GradientButton3.Click += new System.EventHandler(this.guna2GradientButton3_Click);
+            this.guna2GradientButton3.Click += new System.EventHandler(this.guna2GradientButton3_Click);
             // 
             // lbldolar
             // 
