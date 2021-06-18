@@ -32,28 +32,19 @@ namespace WindowsFormsApp1
             float urunTutar, saticiBakiye;
 
             baglanti.Open();
-            //SqlCommand command = new SqlCommand(@"insert into  tblProduct2 (productName,ProductAmount,ProductPrice) 
-            //values(@productName,@productAmount,@productPrice)", baglanti);
-            ////command.Parameters.AddWithValue("@userID", userId);
-            //command.Parameters.AddWithValue("@productName", txtUrunAdi.Text);
-            //command.Parameters.AddWithValue("@productAmount", txtUrunMiktar.Text);
-            //command.Parameters.AddWithValue("@productPrice", txtUrunFiyati.Text);
-            //command.ExecuteNonQuery();
+        
             MessageBox.Show("Urun sistemde alan var mı yok mu kontrol edılecektır");
             //alıcı id donucek
-            SqlCommand komut = new SqlCommand("select ReceiverID , ProductAmount* ProductPrice as UrunTutar From tblBuying where productName=@productName and ProductAmount=@productAmount and  ProductPrice=@productPrice", baglanti);
-            komut.Parameters.AddWithValue("@productName", txtUrunAdi.Text);
-            komut.Parameters.AddWithValue("@productAmount", Convert.ToSingle(txtUrunMiktar.Text));
-            komut.Parameters.AddWithValue("@productPrice", Convert.ToSingle(txtUrunFiyati.Text));
+            SqlCommand komut = new SqlCommand("select UserID , ProductAmount* ProductPrice as UrunTutar From tblProduct2 where productName=@productName and ProductAmount=@productAmount and  ProductPrice=@productPrice", baglanti);
+            komut.Parameters.AddWithValue("@productName", txtAdi.Text);
+            komut.Parameters.AddWithValue("@productAmount", Convert.ToSingle(txtMiktar.Text));
+            komut.Parameters.AddWithValue("@productPrice", Convert.ToSingle(txtFiyat.Text));
             SqlDataReader dr = komut.ExecuteReader();
-            //txtAdi.Text = "";
-            //txtMiktar.Text = "";
-            //txtFiyat.Text = "";
             if (dr.Read())
             {
 
-                aliciId = Convert.ToInt32(dr["ReceiverID"]);
-                MessageBox.Show("satici id =" + aliciId);
+                aliciId = Convert.ToInt32(dr["UserID"]);
+                MessageBox.Show("alici id =" + aliciId);
                 MessageBox.Show("al sat işlemi yapılabilinir urun bulundu");
                 urunTutar = Convert.ToSingle(dr["UrunTutar"]);
                 dr.Close();
@@ -99,8 +90,8 @@ namespace WindowsFormsApp1
                     else
                     {
 
-                        SqlCommand komut2 = new SqlCommand(@"select ProductID from tblBuying where ReceiverID= @receiverId", baglanti);
-                        komut2.Parameters.AddWithValue("@receiverId", aliciId);
+                        SqlCommand komut2 = new SqlCommand(@"select ProductID from tblProduct2 where UserID= @aliciId", baglanti);
+                        komut2.Parameters.AddWithValue("@aliciId", aliciId);
                         SqlDataReader veriokuma = komut2.ExecuteReader();
 
                         if (veriokuma.Read())
@@ -182,6 +173,7 @@ namespace WindowsFormsApp1
                         }
                         else
                         {
+                            veriokuma.Close();
                             MessageBox.Show("ProductId verisi okunamadı");
                         }
                     }
@@ -189,15 +181,23 @@ namespace WindowsFormsApp1
                 }
                 else
                 {
+                    oku.Read();
                     MessageBox.Show("alıcı bakiye verisi okunamadı");
                 }
 
             }
             else
             {
+                dr.Close();
                 MessageBox.Show("al sat işlemi yapılamaz. Cünkü bu urunu alan kimse yok");
                 // yok ise satan yanı tblproduct2  tablosuna ekleme
-
+                SqlCommand command3 = new SqlCommand(@"insert into  tblBuying ( ReceiverID,ProductName,ProductAmount,ProductPrice) 
+                values(@receiverID,@productName,@productAmount,@productPrice)", baglanti);
+                command3.Parameters.AddWithValue("@receiverID", userId);
+                command3.Parameters.AddWithValue("@productName", txtAdi.Text);
+                command3.Parameters.AddWithValue("@productAmount", txtMiktar.Text);
+                command3.Parameters.AddWithValue("@productPrice", txtFiyat.Text);
+                command3.ExecuteNonQuery();
             }
 
 
@@ -241,6 +241,9 @@ namespace WindowsFormsApp1
             //lbldolar.Text = dolaralis;
         }
         float guncelAliciBakiye=0, guncelSaticiBakiye=0;
+
+       
+
         private void guna2GradientButton2_Click(object sender, EventArgs e)
         {
             int  urunId,saticiId;
@@ -248,27 +251,18 @@ namespace WindowsFormsApp1
              float saticiBakiye,stcBakiye;
            
             baglanti.Open();
-            //SqlCommand command = new SqlCommand(@"insert into tblBuying (productName,ProductAmount,ProductPrice) 
-            //values(@productName,@productAmount,@productPrice)", baglanti);
-            ////command.Parameters.AddWithValue("@userID", userId);
-            //command.Parameters.AddWithValue("@productName", txtUrunAdi.Text);
-            //command.Parameters.AddWithValue("@productAmount", txtUrunMiktar.Text);
-            //command.Parameters.AddWithValue("@productPrice", txtUrunFiyati.Text);
-            //command.ExecuteNonQuery();
+           
             MessageBox.Show("Urun sistemde varmı yok mu kontrol edılecektır");
  
-            SqlCommand komut = new SqlCommand("select UserID , ProductAmount* ProductPrice as UrunTutar From tblProduct2 where productName=@productName and ProductAmount=@productAmount and  ProductPrice=@productPrice", baglanti);
+            SqlCommand komut = new SqlCommand("select ReceiverID , ProductAmount* ProductPrice as UrunTutar From tblBuying where ProductName=@productName and ProductAmount=@productAmount and  ProductPrice=@productPrice", baglanti);
             komut.Parameters.AddWithValue("@productName", txtUrunAdi.Text);
             komut.Parameters.AddWithValue("@productAmount", Convert.ToSingle(txtUrunMiktar.Text));
             komut.Parameters.AddWithValue("@productPrice", Convert.ToSingle(txtUrunFiyati.Text));
             SqlDataReader dr = komut.ExecuteReader();
-            //txtAdi.Text = "";
-            //txtMiktar.Text = "";
-            //txtFiyat.Text = "";
             if (dr.Read())
             {
 
-                saticiId = Convert.ToInt32(dr["UserID"]);
+                saticiId = Convert.ToInt32(dr["ReceiverID"]);
                 MessageBox.Show("satici id =" + saticiId);
                 MessageBox.Show("al sat işlemi yapılabilinir urun bulundu");
                 urunTutar = Convert.ToSingle(dr["UrunTutar"]);
@@ -316,14 +310,14 @@ namespace WindowsFormsApp1
                     else
                     {
                        
-                            SqlCommand komut2 = new SqlCommand(@"select ProductID from tblProduct2 where UserId= @userId", baglanti);
-                            komut2.Parameters.AddWithValue("@userId", saticiId);
+                            SqlCommand komut2 = new SqlCommand(@"select BuyID from tblBuying where ReceiverID= @receiverID", baglanti);
+                            komut2.Parameters.AddWithValue("@receiverID", saticiId);
                             SqlDataReader veriokuma = komut2.ExecuteReader();
 
                             if (veriokuma.Read())
                             {
 
-                            urunId = Convert.ToInt32(veriokuma["ProductID"]);
+                            urunId = Convert.ToInt32(veriokuma["BuyID"]);
                                 MessageBox.Show(" satici id:" + saticiId);
                                 MessageBox.Show("alici id =" + userId);
                                MessageBox.Show("urun id:"+urunId);
@@ -389,32 +383,41 @@ namespace WindowsFormsApp1
                             "\naliciBakiye:" + guncelAliciBakiye +
                             "\nsaticiBakiye:" + guncelSaticiBakiye);
 
-                            //// alınan ürünü satılanürün tablosundan silme
+                            //alınan ürünü satılanürün tablosundan silme
                             //SqlCommand com = new SqlCommand(@" delete from tblProduct2 where ProductID=@productID", baglanti);
                             //com.Parameters.AddWithValue("@productID", urunId);
                             //com.ExecuteNonQuery();
                             // tablonun güncel versiyonunu gösterme yapılcak
 
                             
-                        }
+                            }
                             else
                             {
-                                MessageBox.Show("ProductId verisi okunamadı");
+                            veriokuma.Close();
+                            MessageBox.Show("ProductId verisi okunamadı");
                             }
                     }
 
                 }
                 else
                 {
+                    oku.Close();
                     MessageBox.Show("alıcı bakiye verisi okunamadı");
                 }
 
             }
             else
             {
+                dr.Close();
                 MessageBox.Show("al sat işlemi yapılamaz urun bulunmadı.Urunuzun beklemede");
                 // bekleme tblbuying tablosonua ekleme fonksiyonlar 
-
+                SqlCommand command3 = new SqlCommand(@"insert into tblProduct2 (UserID,ProductName,ProductAmount,ProductPrice) 
+                values(@userID,@productName,@productAmount,@productPrice)", baglanti);
+                command3.Parameters.AddWithValue("@userID", userId);
+                command3.Parameters.AddWithValue("@productName", txtUrunAdi.Text);
+                command3.Parameters.AddWithValue("@productAmount", txtUrunMiktar.Text);
+                command3.Parameters.AddWithValue("@productPrice", txtUrunFiyati.Text);
+                command3.ExecuteNonQuery();
             }
 
 

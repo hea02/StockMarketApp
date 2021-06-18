@@ -106,6 +106,7 @@ namespace WindowsFormsApp1
             this.txtAdi.ShadowDecoration.Parent = this.txtAdi;
             this.txtAdi.Size = new System.Drawing.Size(168, 50);
             this.txtAdi.TabIndex = 33;
+          //  this.txtAdi.TextChanged += new System.EventHandler(this.txtAdi_TextChanged);
             // 
             // txtFiyat
             // 
