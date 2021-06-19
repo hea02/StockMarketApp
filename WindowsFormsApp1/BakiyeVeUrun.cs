@@ -474,6 +474,7 @@ namespace WindowsFormsApp1
         private void guna2GradientButton3_Click(object sender, EventArgs e)
         {
 
+
             int dlr;
             dlr = Convert.ToInt32(txtdolar.Text);
             int miktar;
