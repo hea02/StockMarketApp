@@ -49,6 +49,7 @@ namespace WindowsFormsApp1
             this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.lbldolar = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -106,7 +107,6 @@ namespace WindowsFormsApp1
             this.txtAdi.ShadowDecoration.Parent = this.txtAdi;
             this.txtAdi.Size = new System.Drawing.Size(168, 50);
             this.txtAdi.TabIndex = 33;
-          //  this.txtAdi.TextChanged += new System.EventHandler(this.txtAdi_TextChanged);
             // 
             // txtFiyat
             // 
@@ -170,7 +170,7 @@ namespace WindowsFormsApp1
             this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(720, 0);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(839, 0);
             this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
@@ -214,7 +214,7 @@ namespace WindowsFormsApp1
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
             this.guna2Button1.Image = global::WindowsFormsApp1.Properties.Resources.ürün;
-            this.guna2Button1.Location = new System.Drawing.Point(632, 386);
+            this.guna2Button1.Location = new System.Drawing.Point(567, 460);
             this.guna2Button1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
@@ -435,12 +435,31 @@ namespace WindowsFormsApp1
             this.label1.TabIndex = 49;
             this.label1.Text = "$ Alış:";
             // 
+            // guna2Button3
+            // 
+            this.guna2Button3.CheckedState.Parent = this.guna2Button3;
+            this.guna2Button3.CustomImages.Parent = this.guna2Button3;
+            this.guna2Button3.DisabledState.Parent = this.guna2Button3;
+            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button3.ForeColor = System.Drawing.Color.White;
+            this.guna2Button3.HoverState.Parent = this.guna2Button3;
+            this.guna2Button3.Image = global::WindowsFormsApp1.Properties.Resources.ürün;
+            this.guna2Button3.Location = new System.Drawing.Point(734, 460);
+            this.guna2Button3.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Button3.Name = "guna2Button3";
+            this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
+            this.guna2Button3.Size = new System.Drawing.Size(148, 32);
+            this.guna2Button3.TabIndex = 50;
+            this.guna2Button3.Text = "HAREKETLERİM";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
+            // 
             // SaticiEkrani
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
-            this.ClientSize = new System.Drawing.Size(776, 418);
+            this.ClientSize = new System.Drawing.Size(895, 505);
+            this.Controls.Add(this.guna2Button3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbldolar);
             this.Controls.Add(this.guna2GradientButton3);
@@ -488,5 +507,6 @@ namespace WindowsFormsApp1
         private Guna.UI2.WinForms.Guna2TextBox txtdolar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbldolar;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3;
     }
 }

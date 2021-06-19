@@ -155,14 +155,25 @@ namespace WindowsFormsApp1
                             data5.ExecuteNonQuery();
                             MessageBox.Show("kasaya düşen 1% lik tutar = " + urunTutar / 100);
 
+                            // tarih hesaplama
+                            DateTime tarih;
+                            tarih = DateTime.Now.Date;
+                            tarih.ToString().TrimEnd('0', ':');
+
 
                             SqlCommand command2 = new SqlCommand(@"
-                            insert into tblHareketler (AliciID,SaticiID,UrunID,AliciBakiye,SaticiBakiye)values(@aliciID,@saticiID,@urunID,@aliciBakiye,@saticiBakiye)", baglanti);
+                            insert into tblHareketler (AliciID,SaticiID,UrunID,AliciBakiye,SaticiBakiye,Tarih,UrunAd,UrunMiktar,UrunTutar)
+                            values(@aliciID,@saticiID,@urunID,@aliciBakiye,@saticiBakiye,@tarih,@urunAd,@urunMiktar,@urunTutar)", baglanti);
                             command2.Parameters.AddWithValue("@aliciID", aliciId);
                             command2.Parameters.AddWithValue("@saticiID", userId);
                             command2.Parameters.AddWithValue("@urunID", urunId);
                             command2.Parameters.AddWithValue("@aliciBakiye", gnclAliciBakiye);
                             command2.Parameters.AddWithValue("@saticiBakiye", gnclSaticiBakiye);
+                            command2.Parameters.AddWithValue("@tarih", tarih);
+                            command2.Parameters.AddWithValue("@urunAd", txtAdi.Text);
+                            command2.Parameters.AddWithValue("@urunMiktar", Convert.ToSingle(txtMiktar.Text));
+                            command2.Parameters.AddWithValue("@urunTutar", urunTutar);
+
                             command2.ExecuteNonQuery();
                             MessageBox.Show("Alıcının Bakiyesinden" + urunTutar + " lira saticinin bakiyesine gönderilmiştir.");
                             MessageBox.Show(
@@ -242,16 +253,21 @@ namespace WindowsFormsApp1
 
         private void SaticiEkrani_Load(object sender, EventArgs e)
         {
-            //string bugun = "https://www.tcmb.gov.tr/kurlar/today.xml";
-            //var xmldosya = new XmlDocument();
-            //xmldosya.Load(bugun);
+            string bugun = "https://www.tcmb.gov.tr/kurlar/today.xml";
+            var xmldosya = new XmlDocument();
+            xmldosya.Load(bugun);
 
-            //string dolaralis = xmldosya.SelectSingleNode("Tarih_Date/Currency[@Kod='USD']/BanknoteBuying").InnerXml;
-            //lbldolar.Text = dolaralis;
+            string dolaralis = xmldosya.SelectSingleNode("Tarih_Date/Currency[@Kod='USD']/BanknoteBuying").InnerXml;
+            lbldolar.Text = dolaralis;
         }
         float guncelAliciBakiye=0, guncelSaticiBakiye=0;
 
-       
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            UserGestures userGestures = new UserGestures(userId);
+            userGestures.Show();
+            this.Hide();
+        }
 
         private void guna2GradientButton2_Click(object sender, EventArgs e)
         {
@@ -383,14 +399,27 @@ namespace WindowsFormsApp1
                             data5.ExecuteNonQuery();
                             MessageBox.Show("kasaya düşen 1% lik tutar = " + urunTutar / 100);
 
+                            // tarih hesaplama
+                            DateTime tarih;
+                            tarih = DateTime.Now.Date;
+                            tarih.ToString().TrimEnd('0', ':');
+
+
+
                             SqlCommand command2 = new SqlCommand(@"
-                            insert into tblHareketler (AliciID,SaticiID,UrunID,AliciBakiye,SaticiBakiye)values(@aliciID,@saticiID,@urunID,@aliciBakiye,@saticiBakiye)", baglanti);
-                                command2.Parameters.AddWithValue("@aliciID", userId);
-                                command2.Parameters.AddWithValue("@saticiID", saticiId);
-                                command2.Parameters.AddWithValue("@urunID", urunId);
-                                command2.Parameters.AddWithValue("@aliciBakiye", guncelAliciBakiye);
-                                command2.Parameters.AddWithValue("@saticiBakiye", guncelSaticiBakiye);
-                                command2.ExecuteNonQuery();
+                            insert into tblHareketler (AliciID,SaticiID,UrunID,AliciBakiye,SaticiBakiye,Tarih,UrunAd,UrunMiktar,UrunTutar)
+                            values(@aliciID,@saticiID,@urunID,@aliciBakiye,@saticiBakiye,@tarih,@urunAd,@urunMiktar,@urunTutar)", baglanti);
+                            command2.Parameters.AddWithValue("@aliciID", userId);
+                            command2.Parameters.AddWithValue("@saticiID", saticiId);
+                            command2.Parameters.AddWithValue("@urunID", urunId);
+                            command2.Parameters.AddWithValue("@aliciBakiye", guncelAliciBakiye);
+                            command2.Parameters.AddWithValue("@saticiBakiye", guncelSaticiBakiye);
+                            command2.Parameters.AddWithValue("@tarih", tarih);
+                            command2.Parameters.AddWithValue("@urunAd", txtUrunAdi.Text);
+                            command2.Parameters.AddWithValue("@urunMiktar", Convert.ToSingle(txtUrunMiktar.Text));
+                            command2.Parameters.AddWithValue("@urunTutar", urunTutar);
+
+                            command2.ExecuteNonQuery();
                                 MessageBox.Show("Alıcının Bakiyesinden"+urunTutar+" lira saticinin bakiyesine gönderilmiştir.");
                             MessageBox.Show(
                             "aliciID:" + userId +
@@ -446,7 +475,7 @@ namespace WindowsFormsApp1
         {
 
             int dlr;
-            dlr = Convert.ToInt32(lbldolar.Text);
+            dlr = Convert.ToInt32(txtdolar.Text);
             int miktar;
             miktar = Convert.ToInt32(txtdolar.Text);
             int tutar;

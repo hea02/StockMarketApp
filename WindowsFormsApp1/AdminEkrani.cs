@@ -32,11 +32,7 @@ namespace WindowsFormsApp1
             this.adminMoneyTableAdapter.Fill(this.projetsDataSet.AdminMoney);
             // TODO: This line of code loads data into the 'projetsDataSet.tblProduct' table. You can move, or remove it, as needed.
             this.tblProductTableAdapter.Fill(this.projetsDataSet.tblProduct);
-            // TODO: Bu kod satırı 'projetsDataSet.AdminMoney' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
-            //  this.adminMoneyTableAdapter.Fill(this.projetsDataSet.AdminMoney);
-            // TODO: Bu kod satırı 'projetsDataSet.tblProduct' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
-            //  this.tblProductTableAdapter.Fill(this.projetsDataSet.tblProduct);
-
+            
 
         }
 
@@ -46,10 +42,10 @@ namespace WindowsFormsApp1
             if (guna2DataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex].Value!= null)
             {
                 guna2DataGridView2.CurrentRow.Selected = true;
-                lblAdi.Text= guna2DataGridView2.Rows[e.RowIndex].Cells["productNameDataGridViewTextBoxColumn1"].FormattedValue.ToString();
-                lblUrunMiktar.Text = guna2DataGridView2.Rows[e.RowIndex].Cells["productAmountDataGridViewTextBoxColumn"].FormattedValue.ToString();
-                lblurunFiyati.Text = guna2DataGridView2.Rows[e.RowIndex].Cells["productPriceDataGridViewTextBoxColumn"].FormattedValue.ToString();
-                lblid.Text= guna2DataGridView2.Rows[e.RowIndex].Cells["userIDDataGridViewTextBoxColumn2"].FormattedValue.ToString();
+                //lblAdi.Text= guna2DataGridView2.Rows[e.RowIndex].Cells["productNameDataGridViewTextBoxColumn1"].FormattedValue.ToString();
+                //lblUrunMiktar.Text = guna2DataGridView2.Rows[e.RowIndex].Cells["productAmountDataGridViewTextBoxColumn"].FormattedValue.ToString();
+                //lblurunFiyati.Text = guna2DataGridView2.Rows[e.RowIndex].Cells["productPriceDataGridViewTextBoxColumn"].FormattedValue.ToString();
+                //lblid.Text= guna2DataGridView2.Rows[e.RowIndex].Cells["userIDDataGridViewTextBoxColumn2"].FormattedValue.ToString();
             }
         }
 
@@ -78,15 +74,15 @@ namespace WindowsFormsApp1
             baglanti.Open();
             SqlCommand komut = new SqlCommand(@"insert into tblProduct2 (ProductName,ProductAmount,ProductPrice,UserID) 
             values(@productName,@productAmount,@productPrice,@userID)", baglanti);
-            komut.Parameters.AddWithValue("@productName", lblAdi.Text);
-            komut.Parameters.AddWithValue("@productAmount", Convert.ToSingle(lblUrunMiktar.Text));
-            komut.Parameters.AddWithValue("@productPrice", Convert.ToSingle(lblurunFiyati.Text));
-            komut.Parameters.AddWithValue("@userID", Convert.ToInt32(lblid.Text));
+            //komut.Parameters.AddWithValue("@productName", lblAdi.Text);
+            //komut.Parameters.AddWithValue("@productAmount", Convert.ToSingle(lblUrunMiktar.Text));
+            //komut.Parameters.AddWithValue("@productPrice", Convert.ToSingle(lblurunFiyati.Text));
+            //komut.Parameters.AddWithValue("@userID", Convert.ToInt32(lblid.Text));
             komut.ExecuteNonQuery();
         
             MessageBox.Show("Onay İşlemi Gerçekleşti.");
             SqlCommand command = new SqlCommand(@"delete from tblProduct where ProductName=@productName", baglanti);
-            command.Parameters.AddWithValue("@productName", lblAdi.Text);
+         //   command.Parameters.AddWithValue("@productName", lblAdi.Text);
             command.ExecuteNonQuery();
             MessageBox.Show("Bekleme listesinden silinip onaylanmıstır.");
          //   this.tblProductTableAdapter.Fill(this.projetsDataSet.tblProduct);

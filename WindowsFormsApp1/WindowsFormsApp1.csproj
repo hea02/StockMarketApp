@@ -118,6 +118,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserGestures.resx">
+      <DependentUpon>UserGestures.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="ProjetsDataSet.xsc">
       <DependentUpon>ProjetsDataSet.xsd</DependentUpon>
