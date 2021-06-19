@@ -92,6 +92,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="UserAdmin.cs" />
+    <Compile Include="UserGestures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserGestures.Designer.cs">
+      <DependentUpon>UserGestures.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdminEkrani.resx">
       <DependentUpon>AdminEkrani.cs</DependentUpon>
     </EmbeddedResource>

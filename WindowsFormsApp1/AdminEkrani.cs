@@ -26,6 +26,8 @@ namespace WindowsFormsApp1
 
         private void AdminEkrani_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'projetsDataSet.tblSafe' table. You can move, or remove it, as needed.
+            this.tblSafeTableAdapter.Fill(this.projetsDataSet.tblSafe);
             // TODO: This line of code loads data into the 'projetsDataSet.AdminMoney' table. You can move, or remove it, as needed.
             this.adminMoneyTableAdapter.Fill(this.projetsDataSet.AdminMoney);
             // TODO: This line of code loads data into the 'projetsDataSet.tblProduct' table. You can move, or remove it, as needed.

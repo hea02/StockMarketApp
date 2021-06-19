@@ -122,10 +122,10 @@ namespace WindowsFormsApp1
 
 
                             SqlCommand data3 = new SqlCommand(@"select MoneyAmount from tblAdminMoney2  where UserID = @userID ", baglanti);
-
                             data3.Parameters.AddWithValue("@UserID", aliciId);
                             data3.ExecuteNonQuery();
                             SqlDataReader data3oku = data3.ExecuteReader();
+
                             if (data3oku.Read())
                             {
                                 gnclAliciBakiye = Convert.ToSingle(data3oku["MoneyAmount"]);
@@ -135,10 +135,10 @@ namespace WindowsFormsApp1
                             MessageBox.Show("alici id" + aliciId);
                             //güncel satici bakiye 
                             SqlCommand data4 = new SqlCommand(@"select MoneyAmount from tblAdminMoney2  where UserID = @userID ", baglanti);
-
                             data4.Parameters.AddWithValue("@UserID", userId);
                             data4.ExecuteNonQuery();
                             SqlDataReader data4oku = data4.ExecuteReader();
+
                             if (data4oku.Read())
                             {
                                 gnclSaticiBakiye = Convert.ToSingle(data4oku["MoneyAmount"]);
@@ -146,6 +146,15 @@ namespace WindowsFormsApp1
                                 data4oku.Close();
 
                             }
+
+                            // 1% kasaya atıyoruz update tblSafe set Safe= Safe+0.1
+                            SqlCommand data5 = new SqlCommand("addSafe ", baglanti);
+                            data5.CommandType=CommandType.StoredProcedure;
+                            data5.Parameters.Add("@safe",SqlDbType.Float);
+                            data5.Parameters["@safe"].Value = urunTutar / 100;
+                            data5.ExecuteNonQuery();
+                            MessageBox.Show("kasaya düşen 1% lik tutar = " + urunTutar / 100);
+
 
                             SqlCommand command2 = new SqlCommand(@"
                             insert into tblHareketler (AliciID,SaticiID,UrunID,AliciBakiye,SaticiBakiye)values(@aliciID,@saticiID,@urunID,@aliciBakiye,@saticiBakiye)", baglanti);
@@ -366,6 +375,13 @@ namespace WindowsFormsApp1
                                 data4oku.Close();
 
                             }
+                            // 1% kasaya atıyoruz update tblSafe set Safe= Safe+0.1
+                            SqlCommand data5 = new SqlCommand("addSafe ", baglanti);
+                            data5.CommandType = CommandType.StoredProcedure;
+                            data5.Parameters.Add("@safe", SqlDbType.Float);
+                            data5.Parameters["@safe"].Value = urunTutar / 100;
+                            data5.ExecuteNonQuery();
+                            MessageBox.Show("kasaya düşen 1% lik tutar = " + urunTutar / 100);
 
                             SqlCommand command2 = new SqlCommand(@"
                             insert into tblHareketler (AliciID,SaticiID,UrunID,AliciBakiye,SaticiBakiye)values(@aliciID,@saticiID,@urunID,@aliciBakiye,@saticiBakiye)", baglanti);
