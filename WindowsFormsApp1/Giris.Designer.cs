@@ -35,14 +35,14 @@ namespace WindowsFormsApp1
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.txtKullaniciAd = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtsifre = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2ToggleSwitch1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
-            this.btnGirisGirisYap = new Guna.UI2.WinForms.Guna2Button();
+            this.TgglSwitchGiris = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.btnGirisYap = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnKayıt = new Guna.UI2.WinForms.Guna2Button();
+            this.PictureBoxGiris = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxGiris)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,13 +81,14 @@ namespace WindowsFormsApp1
             this.txtKullaniciAd.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtKullaniciAd.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtKullaniciAd.HoverState.Parent = this.txtKullaniciAd;
-            this.txtKullaniciAd.Location = new System.Drawing.Point(32, 142);
+            this.txtKullaniciAd.Location = new System.Drawing.Point(43, 175);
+            this.txtKullaniciAd.Margin = new System.Windows.Forms.Padding(4);
             this.txtKullaniciAd.Name = "txtKullaniciAd";
             this.txtKullaniciAd.PasswordChar = '\0';
             this.txtKullaniciAd.PlaceholderText = "Kullanıcı Adı";
             this.txtKullaniciAd.SelectedText = "";
             this.txtKullaniciAd.ShadowDecoration.Parent = this.txtKullaniciAd;
-            this.txtKullaniciAd.Size = new System.Drawing.Size(200, 41);
+            this.txtKullaniciAd.Size = new System.Drawing.Size(267, 50);
             this.txtKullaniciAd.TabIndex = 32;
             // 
             // txtsifre
@@ -107,148 +108,162 @@ namespace WindowsFormsApp1
             this.txtsifre.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtsifre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtsifre.HoverState.Parent = this.txtsifre;
-            this.txtsifre.Location = new System.Drawing.Point(32, 189);
+            this.txtsifre.Location = new System.Drawing.Point(43, 233);
+            this.txtsifre.Margin = new System.Windows.Forms.Padding(4);
             this.txtsifre.Name = "txtsifre";
             this.txtsifre.PasswordChar = '\0';
             this.txtsifre.PlaceholderText = "Şifre";
             this.txtsifre.SelectedText = "";
             this.txtsifre.ShadowDecoration.Parent = this.txtsifre;
-            this.txtsifre.Size = new System.Drawing.Size(200, 41);
+            this.txtsifre.Size = new System.Drawing.Size(267, 50);
             this.txtsifre.TabIndex = 33;
             // 
-            // guna2ToggleSwitch1
+            // TgglSwitchGiris
             // 
-            this.guna2ToggleSwitch1.Checked = true;
-            this.guna2ToggleSwitch1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ToggleSwitch1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ToggleSwitch1.CheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.guna2ToggleSwitch1.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2ToggleSwitch1.CheckedState.Parent = this.guna2ToggleSwitch1;
-            this.guna2ToggleSwitch1.Location = new System.Drawing.Point(34, 245);
-            this.guna2ToggleSwitch1.Name = "guna2ToggleSwitch1";
-            this.guna2ToggleSwitch1.ShadowDecoration.Parent = this.guna2ToggleSwitch1;
-            this.guna2ToggleSwitch1.Size = new System.Drawing.Size(35, 20);
-            this.guna2ToggleSwitch1.TabIndex = 34;
-            this.guna2ToggleSwitch1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2ToggleSwitch1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2ToggleSwitch1.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.guna2ToggleSwitch1.UncheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2ToggleSwitch1.UncheckedState.Parent = this.guna2ToggleSwitch1;
+            this.TgglSwitchGiris.Checked = true;
+            this.TgglSwitchGiris.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TgglSwitchGiris.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TgglSwitchGiris.CheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.TgglSwitchGiris.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.TgglSwitchGiris.CheckedState.Parent = this.TgglSwitchGiris;
+            this.TgglSwitchGiris.Location = new System.Drawing.Point(45, 302);
+            this.TgglSwitchGiris.Margin = new System.Windows.Forms.Padding(4);
+            this.TgglSwitchGiris.Name = "TgglSwitchGiris";
+            this.TgglSwitchGiris.ShadowDecoration.Parent = this.TgglSwitchGiris;
+            this.TgglSwitchGiris.Size = new System.Drawing.Size(47, 25);
+            this.TgglSwitchGiris.TabIndex = 34;
+            this.TgglSwitchGiris.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.TgglSwitchGiris.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.TgglSwitchGiris.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.TgglSwitchGiris.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.TgglSwitchGiris.UncheckedState.Parent = this.TgglSwitchGiris;
             // 
-            // btnGirisGirisYap
+            // btnGirisYap
             // 
-            this.btnGirisGirisYap.BorderColor = System.Drawing.Color.Transparent;
-            this.btnGirisGirisYap.BorderRadius = 10;
-            this.btnGirisGirisYap.BorderThickness = 1;
-            this.btnGirisGirisYap.CheckedState.Parent = this.btnGirisGirisYap;
-            this.btnGirisGirisYap.CustomImages.Parent = this.btnGirisGirisYap;
-            this.btnGirisGirisYap.FillColor = System.Drawing.Color.Yellow;
-            this.btnGirisGirisYap.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGirisGirisYap.ForeColor = System.Drawing.Color.Black;
-            this.btnGirisGirisYap.HoverState.Parent = this.btnGirisGirisYap;
-            this.btnGirisGirisYap.Location = new System.Drawing.Point(96, 267);
-            this.btnGirisGirisYap.Name = "btnGirisGirisYap";
-            this.btnGirisGirisYap.ShadowDecoration.Parent = this.btnGirisGirisYap;
-            this.btnGirisGirisYap.Size = new System.Drawing.Size(91, 45);
-            this.btnGirisGirisYap.TabIndex = 35;
-            this.btnGirisGirisYap.Text = "Giriş Yap";
-            this.btnGirisGirisYap.Click += new System.EventHandler(this.btnGirisGirisYap_Click_1);
+            this.btnGirisYap.BorderColor = System.Drawing.Color.Transparent;
+            this.btnGirisYap.BorderRadius = 10;
+            this.btnGirisYap.BorderThickness = 1;
+            this.btnGirisYap.CheckedState.Parent = this.btnGirisYap;
+            this.btnGirisYap.CustomImages.Parent = this.btnGirisYap;
+            this.btnGirisYap.DisabledState.Parent = this.btnGirisYap;
+            this.btnGirisYap.FillColor = System.Drawing.Color.Yellow;
+            this.btnGirisYap.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGirisYap.ForeColor = System.Drawing.Color.Black;
+            this.btnGirisYap.HoverState.Parent = this.btnGirisYap;
+            this.btnGirisYap.Location = new System.Drawing.Point(128, 329);
+            this.btnGirisYap.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGirisYap.Name = "btnGirisYap";
+            this.btnGirisYap.ShadowDecoration.Parent = this.btnGirisYap;
+            this.btnGirisYap.Size = new System.Drawing.Size(121, 55);
+            this.btnGirisYap.TabIndex = 35;
+            this.btnGirisYap.Text = "Giriş Yap";
+            this.btnGirisYap.Click += new System.EventHandler(this.btnGirisYap_Click_1);
             // 
             // guna2Button1
             // 
             this.guna2Button1.CheckedState.Parent = this.guna2Button1;
             this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.DisabledState.Parent = this.guna2Button1;
             this.guna2Button1.FillColor = System.Drawing.Color.Empty;
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(717, 0);
+            this.guna2Button1.Location = new System.Drawing.Point(956, 0);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(38, 30);
+            this.guna2Button1.Size = new System.Drawing.Size(51, 37);
             this.guna2Button1.TabIndex = 36;
             this.guna2Button1.Text = "X";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            //this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // guna2Button2
             // 
             this.guna2Button2.CheckedState.Parent = this.guna2Button2;
             this.guna2Button2.CustomImages.Parent = this.guna2Button2;
+            this.guna2Button2.DisabledState.Parent = this.guna2Button2;
             this.guna2Button2.FillColor = System.Drawing.Color.Empty;
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
             this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Location = new System.Drawing.Point(682, 0);
+            this.guna2Button2.Location = new System.Drawing.Point(909, 0);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.Size = new System.Drawing.Size(38, 30);
+            this.guna2Button2.Size = new System.Drawing.Size(51, 37);
             this.guna2Button2.TabIndex = 37;
             this.guna2Button2.Text = "_";
             // 
-            // guna2Button3
+            // btnKayıt
             // 
-            this.guna2Button3.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.BorderRadius = 10;
-            this.guna2Button3.BorderThickness = 1;
-            this.guna2Button3.CheckedState.Parent = this.guna2Button3;
-            this.guna2Button3.CustomImages.Parent = this.guna2Button3;
-            this.guna2Button3.FillColor = System.Drawing.Color.Aquamarine;
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.guna2Button3.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button3.HoverState.Parent = this.guna2Button3;
-            this.guna2Button3.Location = new System.Drawing.Point(100, 317);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
-            this.guna2Button3.Size = new System.Drawing.Size(80, 27);
-            this.guna2Button3.TabIndex = 38;
-            this.guna2Button3.Text = "Kayıt Ol";
-            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
+            this.btnKayıt.BorderColor = System.Drawing.Color.Transparent;
+            this.btnKayıt.BorderRadius = 10;
+            this.btnKayıt.BorderThickness = 1;
+            this.btnKayıt.CheckedState.Parent = this.btnKayıt;
+            this.btnKayıt.CustomImages.Parent = this.btnKayıt;
+            this.btnKayıt.DisabledState.Parent = this.btnKayıt;
+            this.btnKayıt.FillColor = System.Drawing.Color.Aquamarine;
+            this.btnKayıt.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnKayıt.ForeColor = System.Drawing.Color.Black;
+            this.btnKayıt.HoverState.Parent = this.btnKayıt;
+            this.btnKayıt.Location = new System.Drawing.Point(133, 390);
+            this.btnKayıt.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKayıt.Name = "btnKayıt";
+            this.btnKayıt.ShadowDecoration.Parent = this.btnKayıt;
+            this.btnKayıt.Size = new System.Drawing.Size(107, 33);
+            this.btnKayıt.TabIndex = 38;
+            this.btnKayıt.Text = "Kayıt Ol";
+           // this.btnKayıt.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
-            // guna2PictureBox2
+            // PictureBoxGiris
             // 
-            this.guna2PictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.BUGomv;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(301, -82);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
-            this.guna2PictureBox2.Size = new System.Drawing.Size(468, 517);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 31;
-            this.guna2PictureBox2.TabStop = false;
+            this.PictureBoxGiris.Image = global::WindowsFormsApp1.Properties.Resources.BUGomv;
+            this.PictureBoxGiris.ImageRotate = 0F;
+            this.PictureBoxGiris.Location = new System.Drawing.Point(401, -101);
+            this.PictureBoxGiris.Margin = new System.Windows.Forms.Padding(4);
+            this.PictureBoxGiris.Name = "PictureBoxGiris";
+            this.PictureBoxGiris.ShadowDecoration.Parent = this.PictureBoxGiris;
+            this.PictureBoxGiris.Size = new System.Drawing.Size(624, 636);
+            this.PictureBoxGiris.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBoxGiris.TabIndex = 31;
+            this.PictureBoxGiris.TabStop = false;
             // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.BorderRadius = 37;
             this.guna2PictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.dha2_2;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(32, 5);
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(43, 6);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(218, 101);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(291, 124);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.guna2PictureBox1.TabIndex = 30;
             this.guna2PictureBox1.TabStop = false;
             // 
             // Giris
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
-            this.ClientSize = new System.Drawing.Size(751, 349);
-            this.Controls.Add(this.guna2Button3);
+            this.ClientSize = new System.Drawing.Size(1001, 430);
+            this.Controls.Add(this.btnKayıt);
             this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.guna2Button1);
-            this.Controls.Add(this.btnGirisGirisYap);
-            this.Controls.Add(this.guna2ToggleSwitch1);
+            this.Controls.Add(this.btnGirisYap);
+            this.Controls.Add(this.TgglSwitchGiris);
             this.Controls.Add(this.txtsifre);
             this.Controls.Add(this.txtKullaniciAd);
-            this.Controls.Add(this.guna2PictureBox2);
+            this.Controls.Add(this.PictureBoxGiris);
             this.Controls.Add(this.guna2PictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Giris";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "GirisEkrani";
             this.TopMost = true;
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxGiris)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -260,12 +275,12 @@ namespace WindowsFormsApp1
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button btnGirisGirisYap;
-        private Guna.UI2.WinForms.Guna2ToggleSwitch guna2ToggleSwitch1;
+        private Guna.UI2.WinForms.Guna2Button btnGirisYap;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch TgglSwitchGiris;
         private Guna.UI2.WinForms.Guna2TextBox txtsifre;
         private Guna.UI2.WinForms.Guna2TextBox txtKullaniciAd;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2PictureBox PictureBoxGiris;
+        private Guna.UI2.WinForms.Guna2Button btnKayıt;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }

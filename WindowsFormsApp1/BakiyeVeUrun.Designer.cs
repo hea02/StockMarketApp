@@ -32,21 +32,20 @@ namespace WindowsFormsApp1
             this.components = new System.ComponentModel.Container();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.UrunEkle = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtAdi = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtFiyat = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtBakiye = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.txtMiktar = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.bakiyeEkle = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnGeri = new Guna.UI2.WinForms.Guna2Button();
             this.txtUrunMiktar = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUrunFiyati = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUrunAdi = new Guna.UI2.WinForms.Guna2TextBox();
             this.buttonAlım = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtdolar = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.BakiyeDonustur = new Guna.UI2.WinForms.Guna2GradientButton();
             this.lbldolar = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
@@ -61,24 +60,24 @@ namespace WindowsFormsApp1
             this.guna2DragControl1.ContainerControl = this;
             this.guna2DragControl1.TargetControl = this;
             // 
-            // guna2GradientButton1
+            // UrunEkle
             // 
-            this.guna2GradientButton1.BorderRadius = 10;
-            this.guna2GradientButton1.CheckedState.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.CustomImages.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.DisabledState.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.Yellow;
-            this.guna2GradientButton1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2GradientButton1.ForeColor = System.Drawing.Color.Black;
-            this.guna2GradientButton1.HoverState.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(349, 268);
-            this.guna2GradientButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2GradientButton1.Name = "guna2GradientButton1";
-            this.guna2GradientButton1.ShadowDecoration.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.Size = new System.Drawing.Size(168, 55);
-            this.guna2GradientButton1.TabIndex = 18;
-            this.guna2GradientButton1.Text = "ÜRÜNÜ EKLE";
-            this.guna2GradientButton1.Click += new System.EventHandler(this.guna2GradientButton1_Click);
+            this.UrunEkle.BorderRadius = 10;
+            this.UrunEkle.CheckedState.Parent = this.UrunEkle;
+            this.UrunEkle.CustomImages.Parent = this.UrunEkle;
+            this.UrunEkle.DisabledState.Parent = this.UrunEkle;
+            this.UrunEkle.FillColor2 = System.Drawing.Color.Yellow;
+            this.UrunEkle.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold);
+            this.UrunEkle.ForeColor = System.Drawing.Color.Black;
+            this.UrunEkle.HoverState.Parent = this.UrunEkle;
+            this.UrunEkle.Location = new System.Drawing.Point(349, 268);
+            this.UrunEkle.Margin = new System.Windows.Forms.Padding(4);
+            this.UrunEkle.Name = "UrunEkle";
+            this.UrunEkle.ShadowDecoration.Parent = this.UrunEkle;
+            this.UrunEkle.Size = new System.Drawing.Size(168, 55);
+            this.UrunEkle.TabIndex = 18;
+            this.UrunEkle.Text = "ÜRÜNÜ EKLE";
+            this.UrunEkle.Click += new System.EventHandler(this.UrunEkle_Click);
             // 
             // txtAdi
             // 
@@ -205,61 +204,43 @@ namespace WindowsFormsApp1
             this.txtMiktar.Size = new System.Drawing.Size(168, 50);
             this.txtMiktar.TabIndex = 39;
             // 
-            // guna2Button1
+            // bakiyeEkle
             // 
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.DisabledState.Parent = this.guna2Button1;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Image = global::WindowsFormsApp1.Properties.Resources.ürün;
-            this.guna2Button1.Location = new System.Drawing.Point(567, 460);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(148, 32);
-            this.guna2Button1.TabIndex = 40;
-            this.guna2Button1.Text = "ALIM EKRANI";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.bakiyeEkle.CheckedState.Parent = this.bakiyeEkle;
+            this.bakiyeEkle.CustomImages.Parent = this.bakiyeEkle;
+            this.bakiyeEkle.DisabledState.Parent = this.bakiyeEkle;
+            this.bakiyeEkle.FillColor = System.Drawing.Color.Yellow;
+            this.bakiyeEkle.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold);
+            this.bakiyeEkle.ForeColor = System.Drawing.Color.Black;
+            this.bakiyeEkle.HoverState.Parent = this.bakiyeEkle;
+            this.bakiyeEkle.Image = global::WindowsFormsApp1.Properties.Resources.BAKİYE;
+            this.bakiyeEkle.Location = new System.Drawing.Point(632, 257);
+            this.bakiyeEkle.Margin = new System.Windows.Forms.Padding(4);
+            this.bakiyeEkle.Name = "bakiyeEkle";
+            this.bakiyeEkle.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.bakiyeEkle.ShadowDecoration.Parent = this.bakiyeEkle;
+            this.bakiyeEkle.Size = new System.Drawing.Size(93, 69);
+            this.bakiyeEkle.TabIndex = 37;
+            this.bakiyeEkle.Text = "EKLE";
+            this.bakiyeEkle.Click += new System.EventHandler(this.bakiyeEkle_Click);
             // 
-            // guna2CircleButton1
+            // btnGeri
             // 
-            this.guna2CircleButton1.CheckedState.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.CustomImages.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.DisabledState.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.FillColor = System.Drawing.Color.Yellow;
-            this.guna2CircleButton1.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold);
-            this.guna2CircleButton1.ForeColor = System.Drawing.Color.Black;
-            this.guna2CircleButton1.HoverState.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.Image = global::WindowsFormsApp1.Properties.Resources.BAKİYE;
-            this.guna2CircleButton1.Location = new System.Drawing.Point(632, 257);
-            this.guna2CircleButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2CircleButton1.Name = "guna2CircleButton1";
-            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton1.ShadowDecoration.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.Size = new System.Drawing.Size(93, 69);
-            this.guna2CircleButton1.TabIndex = 37;
-            this.guna2CircleButton1.Text = "EKLE";
-            this.guna2CircleButton1.Click += new System.EventHandler(this.guna2CircleButton1_Click);
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
-            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
-            this.guna2Button2.DisabledState.Parent = this.guna2Button2;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Image = global::WindowsFormsApp1.Properties.Resources.geriiiiiii;
-            this.guna2Button2.Location = new System.Drawing.Point(-1, -1);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.Size = new System.Drawing.Size(69, 28);
-            this.guna2Button2.TabIndex = 41;
-            this.guna2Button2.Text = "GERİ";
-            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            this.btnGeri.CheckedState.Parent = this.btnGeri;
+            this.btnGeri.CustomImages.Parent = this.btnGeri;
+            this.btnGeri.DisabledState.Parent = this.btnGeri;
+            this.btnGeri.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnGeri.ForeColor = System.Drawing.Color.White;
+            this.btnGeri.HoverState.Parent = this.btnGeri;
+            this.btnGeri.Image = global::WindowsFormsApp1.Properties.Resources.geriiiiiii;
+            this.btnGeri.Location = new System.Drawing.Point(-1, -1);
+            this.btnGeri.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGeri.Name = "btnGeri";
+            this.btnGeri.ShadowDecoration.Parent = this.btnGeri;
+            this.btnGeri.Size = new System.Drawing.Size(69, 28);
+            this.btnGeri.TabIndex = 41;
+            this.btnGeri.Text = "GERİ";
+            this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click);
             // 
             // txtUrunMiktar
             // 
@@ -362,7 +343,7 @@ namespace WindowsFormsApp1
             this.buttonAlım.Size = new System.Drawing.Size(168, 55);
             this.buttonAlım.TabIndex = 42;
             this.buttonAlım.Text = "Alım İsteği";
-            this.buttonAlım.Click += new System.EventHandler(this.guna2GradientButton2_Click);
+            this.buttonAlım.Click += new System.EventHandler(this.buttonAlım_Click);
             // 
             // txtdolar
             // 
@@ -392,24 +373,24 @@ namespace WindowsFormsApp1
             this.txtdolar.Size = new System.Drawing.Size(180, 50);
             this.txtdolar.TabIndex = 46;
             // 
-            // guna2GradientButton3
+            // BakiyeDonustur
             // 
-            this.guna2GradientButton3.BorderRadius = 10;
-            this.guna2GradientButton3.CheckedState.Parent = this.guna2GradientButton3;
-            this.guna2GradientButton3.CustomImages.Parent = this.guna2GradientButton3;
-            this.guna2GradientButton3.DisabledState.Parent = this.guna2GradientButton3;
-            this.guna2GradientButton3.FillColor2 = System.Drawing.Color.Yellow;
-            this.guna2GradientButton3.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2GradientButton3.ForeColor = System.Drawing.Color.Black;
-            this.guna2GradientButton3.HoverState.Parent = this.guna2GradientButton3;
-            this.guna2GradientButton3.Location = new System.Drawing.Point(588, 142);
-            this.guna2GradientButton3.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2GradientButton3.Name = "guna2GradientButton3";
-            this.guna2GradientButton3.ShadowDecoration.Parent = this.guna2GradientButton3;
-            this.guna2GradientButton3.Size = new System.Drawing.Size(172, 36);
-            this.guna2GradientButton3.TabIndex = 47;
-            this.guna2GradientButton3.Text = "DÖNÜŞTÜR";
-            this.guna2GradientButton3.Click += new System.EventHandler(this.guna2GradientButton3_Click);
+            this.BakiyeDonustur.BorderRadius = 10;
+            this.BakiyeDonustur.CheckedState.Parent = this.BakiyeDonustur;
+            this.BakiyeDonustur.CustomImages.Parent = this.BakiyeDonustur;
+            this.BakiyeDonustur.DisabledState.Parent = this.BakiyeDonustur;
+            this.BakiyeDonustur.FillColor2 = System.Drawing.Color.Yellow;
+            this.BakiyeDonustur.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold);
+            this.BakiyeDonustur.ForeColor = System.Drawing.Color.Black;
+            this.BakiyeDonustur.HoverState.Parent = this.BakiyeDonustur;
+            this.BakiyeDonustur.Location = new System.Drawing.Point(588, 142);
+            this.BakiyeDonustur.Margin = new System.Windows.Forms.Padding(4);
+            this.BakiyeDonustur.Name = "BakiyeDonustur";
+            this.BakiyeDonustur.ShadowDecoration.Parent = this.BakiyeDonustur;
+            this.BakiyeDonustur.Size = new System.Drawing.Size(172, 36);
+            this.BakiyeDonustur.TabIndex = 47;
+            this.BakiyeDonustur.Text = "DÖNÜŞTÜR";
+            this.BakiyeDonustur.Click += new System.EventHandler(this.BakiyeDonustur_Click);
             // 
             // lbldolar
             // 
@@ -462,21 +443,20 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.guna2Button3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbldolar);
-            this.Controls.Add(this.guna2GradientButton3);
+            this.Controls.Add(this.BakiyeDonustur);
             this.Controls.Add(this.txtdolar);
             this.Controls.Add(this.txtUrunMiktar);
             this.Controls.Add(this.txtUrunFiyati);
             this.Controls.Add(this.txtUrunAdi);
             this.Controls.Add(this.buttonAlım);
-            this.Controls.Add(this.guna2Button2);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.btnGeri);
             this.Controls.Add(this.txtMiktar);
             this.Controls.Add(this.guna2ControlBox1);
-            this.Controls.Add(this.guna2CircleButton1);
+            this.Controls.Add(this.bakiyeEkle);
             this.Controls.Add(this.txtBakiye);
             this.Controls.Add(this.txtFiyat);
             this.Controls.Add(this.txtAdi);
-            this.Controls.Add(this.guna2GradientButton1);
+            this.Controls.Add(this.UrunEkle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "SaticiEkrani";
@@ -490,20 +470,19 @@ namespace WindowsFormsApp1
         #endregion
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
+        private Guna.UI2.WinForms.Guna2GradientButton UrunEkle;
         private Guna.UI2.WinForms.Guna2TextBox txtFiyat;
         private Guna.UI2.WinForms.Guna2TextBox txtAdi;
         private Guna.UI2.WinForms.Guna2TextBox txtBakiye;
-        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
+        private Guna.UI2.WinForms.Guna2CircleButton bakiyeEkle;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2TextBox txtMiktar;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button btnGeri;
         private Guna.UI2.WinForms.Guna2TextBox txtUrunMiktar;
         private Guna.UI2.WinForms.Guna2TextBox txtUrunFiyati;
         private Guna.UI2.WinForms.Guna2TextBox txtUrunAdi;
         private Guna.UI2.WinForms.Guna2GradientButton buttonAlım;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton3;
+        private Guna.UI2.WinForms.Guna2GradientButton BakiyeDonustur;
         private Guna.UI2.WinForms.Guna2TextBox txtdolar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbldolar;

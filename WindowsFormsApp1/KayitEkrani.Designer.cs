@@ -41,8 +41,8 @@ namespace WindowsFormsApp1
             this.txtKayitAdres = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtKayitTel = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtKayitKullaniciAd = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnkayitOl = new Guna.UI2.WinForms.Guna2Button();
+            this.btnGiris = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -57,10 +57,11 @@ namespace WindowsFormsApp1
             this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(253, 1);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(337, 1);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox1.Size = new System.Drawing.Size(60, 36);
             this.guna2ControlBox1.TabIndex = 12;
             // 
             // guna2DragControl1
@@ -84,14 +85,15 @@ namespace WindowsFormsApp1
             this.txtKayitAd.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtKayitAd.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtKayitAd.HoverState.Parent = this.txtKayitAd;
-            this.txtKayitAd.Location = new System.Drawing.Point(152, 167);
+            this.txtKayitAd.Location = new System.Drawing.Point(203, 206);
+            this.txtKayitAd.Margin = new System.Windows.Forms.Padding(4);
             this.txtKayitAd.Name = "txtKayitAd";
             this.txtKayitAd.PasswordChar = '\0';
             this.txtKayitAd.PlaceholderText = "";
             this.txtKayitAd.SelectedText = "";
             this.txtKayitAd.SelectionStart = 2;
             this.txtKayitAd.ShadowDecoration.Parent = this.txtKayitAd;
-            this.txtKayitAd.Size = new System.Drawing.Size(130, 36);
+            this.txtKayitAd.Size = new System.Drawing.Size(173, 44);
             this.txtKayitAd.TabIndex = 14;
             // 
             // txtKayitSoyad
@@ -110,14 +112,15 @@ namespace WindowsFormsApp1
             this.txtKayitSoyad.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtKayitSoyad.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtKayitSoyad.HoverState.Parent = this.txtKayitSoyad;
-            this.txtKayitSoyad.Location = new System.Drawing.Point(152, 209);
+            this.txtKayitSoyad.Location = new System.Drawing.Point(203, 257);
+            this.txtKayitSoyad.Margin = new System.Windows.Forms.Padding(4);
             this.txtKayitSoyad.Name = "txtKayitSoyad";
             this.txtKayitSoyad.PasswordChar = '\0';
             this.txtKayitSoyad.PlaceholderText = "";
             this.txtKayitSoyad.SelectedText = "";
             this.txtKayitSoyad.SelectionStart = 5;
             this.txtKayitSoyad.ShadowDecoration.Parent = this.txtKayitSoyad;
-            this.txtKayitSoyad.Size = new System.Drawing.Size(130, 36);
+            this.txtKayitSoyad.Size = new System.Drawing.Size(173, 44);
             this.txtKayitSoyad.TabIndex = 15;
             // 
             // txtKayitTc
@@ -136,14 +139,15 @@ namespace WindowsFormsApp1
             this.txtKayitTc.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtKayitTc.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtKayitTc.HoverState.Parent = this.txtKayitTc;
-            this.txtKayitTc.Location = new System.Drawing.Point(14, 167);
+            this.txtKayitTc.Location = new System.Drawing.Point(19, 206);
+            this.txtKayitTc.Margin = new System.Windows.Forms.Padding(4);
             this.txtKayitTc.Name = "txtKayitTc";
             this.txtKayitTc.PasswordChar = '\0';
             this.txtKayitTc.PlaceholderText = "";
             this.txtKayitTc.SelectedText = "";
             this.txtKayitTc.SelectionStart = 2;
             this.txtKayitTc.ShadowDecoration.Parent = this.txtKayitTc;
-            this.txtKayitTc.Size = new System.Drawing.Size(130, 36);
+            this.txtKayitTc.Size = new System.Drawing.Size(173, 44);
             this.txtKayitTc.TabIndex = 16;
             // 
             // txtKayitSifre
@@ -162,14 +166,15 @@ namespace WindowsFormsApp1
             this.txtKayitSifre.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtKayitSifre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtKayitSifre.HoverState.Parent = this.txtKayitSifre;
-            this.txtKayitSifre.Location = new System.Drawing.Point(14, 125);
+            this.txtKayitSifre.Location = new System.Drawing.Point(19, 154);
+            this.txtKayitSifre.Margin = new System.Windows.Forms.Padding(4);
             this.txtKayitSifre.Name = "txtKayitSifre";
             this.txtKayitSifre.PasswordChar = '\0';
             this.txtKayitSifre.PlaceholderText = "";
             this.txtKayitSifre.SelectedText = "";
             this.txtKayitSifre.SelectionStart = 5;
             this.txtKayitSifre.ShadowDecoration.Parent = this.txtKayitSifre;
-            this.txtKayitSifre.Size = new System.Drawing.Size(130, 36);
+            this.txtKayitSifre.Size = new System.Drawing.Size(173, 44);
             this.txtKayitSifre.TabIndex = 17;
             // 
             // txtKayitMail
@@ -188,14 +193,15 @@ namespace WindowsFormsApp1
             this.txtKayitMail.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtKayitMail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtKayitMail.HoverState.Parent = this.txtKayitMail;
-            this.txtKayitMail.Location = new System.Drawing.Point(152, 83);
+            this.txtKayitMail.Location = new System.Drawing.Point(203, 102);
+            this.txtKayitMail.Margin = new System.Windows.Forms.Padding(4);
             this.txtKayitMail.Name = "txtKayitMail";
             this.txtKayitMail.PasswordChar = '\0';
             this.txtKayitMail.PlaceholderText = "";
             this.txtKayitMail.SelectedText = "";
             this.txtKayitMail.SelectionStart = 4;
             this.txtKayitMail.ShadowDecoration.Parent = this.txtKayitMail;
-            this.txtKayitMail.Size = new System.Drawing.Size(130, 36);
+            this.txtKayitMail.Size = new System.Drawing.Size(173, 44);
             this.txtKayitMail.TabIndex = 18;
             // 
             // txtKayitAdres
@@ -214,14 +220,15 @@ namespace WindowsFormsApp1
             this.txtKayitAdres.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtKayitAdres.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtKayitAdres.HoverState.Parent = this.txtKayitAdres;
-            this.txtKayitAdres.Location = new System.Drawing.Point(152, 125);
+            this.txtKayitAdres.Location = new System.Drawing.Point(203, 154);
+            this.txtKayitAdres.Margin = new System.Windows.Forms.Padding(4);
             this.txtKayitAdres.Name = "txtKayitAdres";
             this.txtKayitAdres.PasswordChar = '\0';
             this.txtKayitAdres.PlaceholderText = "";
             this.txtKayitAdres.SelectedText = "";
             this.txtKayitAdres.SelectionStart = 5;
             this.txtKayitAdres.ShadowDecoration.Parent = this.txtKayitAdres;
-            this.txtKayitAdres.Size = new System.Drawing.Size(130, 36);
+            this.txtKayitAdres.Size = new System.Drawing.Size(173, 44);
             this.txtKayitAdres.TabIndex = 19;
             // 
             // txtKayitTel
@@ -240,14 +247,15 @@ namespace WindowsFormsApp1
             this.txtKayitTel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtKayitTel.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtKayitTel.HoverState.Parent = this.txtKayitTel;
-            this.txtKayitTel.Location = new System.Drawing.Point(14, 209);
+            this.txtKayitTel.Location = new System.Drawing.Point(19, 257);
+            this.txtKayitTel.Margin = new System.Windows.Forms.Padding(4);
             this.txtKayitTel.Name = "txtKayitTel";
             this.txtKayitTel.PasswordChar = '\0';
             this.txtKayitTel.PlaceholderText = "";
             this.txtKayitTel.SelectedText = "";
             this.txtKayitTel.SelectionStart = 7;
             this.txtKayitTel.ShadowDecoration.Parent = this.txtKayitTel;
-            this.txtKayitTel.Size = new System.Drawing.Size(130, 36);
+            this.txtKayitTel.Size = new System.Drawing.Size(173, 44);
             this.txtKayitTel.TabIndex = 20;
             // 
             // txtKayitKullaniciAd
@@ -266,71 +274,78 @@ namespace WindowsFormsApp1
             this.txtKayitKullaniciAd.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtKayitKullaniciAd.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtKayitKullaniciAd.HoverState.Parent = this.txtKayitKullaniciAd;
-            this.txtKayitKullaniciAd.Location = new System.Drawing.Point(14, 83);
+            this.txtKayitKullaniciAd.Location = new System.Drawing.Point(19, 102);
+            this.txtKayitKullaniciAd.Margin = new System.Windows.Forms.Padding(4);
             this.txtKayitKullaniciAd.Name = "txtKayitKullaniciAd";
             this.txtKayitKullaniciAd.PasswordChar = '\0';
             this.txtKayitKullaniciAd.PlaceholderText = "";
             this.txtKayitKullaniciAd.SelectedText = "";
             this.txtKayitKullaniciAd.SelectionStart = 13;
             this.txtKayitKullaniciAd.ShadowDecoration.Parent = this.txtKayitKullaniciAd;
-            this.txtKayitKullaniciAd.Size = new System.Drawing.Size(130, 36);
+            this.txtKayitKullaniciAd.Size = new System.Drawing.Size(173, 44);
             this.txtKayitKullaniciAd.TabIndex = 21;
             // 
-            // guna2Button1
+            // btnkayitOl
             // 
-            this.guna2Button1.BorderRadius = 20;
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.Yellow;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(51, 251);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button1.TabIndex = 22;
-            this.guna2Button1.Text = "KAYIT OL";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.btnkayitOl.BorderRadius = 20;
+            this.btnkayitOl.CheckedState.Parent = this.btnkayitOl;
+            this.btnkayitOl.CustomImages.Parent = this.btnkayitOl;
+            this.btnkayitOl.DisabledState.Parent = this.btnkayitOl;
+            this.btnkayitOl.FillColor = System.Drawing.Color.Yellow;
+            this.btnkayitOl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnkayitOl.ForeColor = System.Drawing.Color.Black;
+            this.btnkayitOl.HoverState.Parent = this.btnkayitOl;
+            this.btnkayitOl.Location = new System.Drawing.Point(68, 309);
+            this.btnkayitOl.Margin = new System.Windows.Forms.Padding(4);
+            this.btnkayitOl.Name = "btnkayitOl";
+            this.btnkayitOl.ShadowDecoration.Parent = this.btnkayitOl;
+            this.btnkayitOl.Size = new System.Drawing.Size(240, 55);
+            this.btnkayitOl.TabIndex = 22;
+            this.btnkayitOl.Text = "KAYIT OL";
+            this.btnkayitOl.Click += new System.EventHandler(this.btnkayitOl_Click);
             // 
-            // guna2CircleButton1
+            // btnGiris
             // 
-            this.guna2CircleButton1.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton1.CheckedState.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.CustomImages.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.FillColor = System.Drawing.Color.DimGray;
-            this.guna2CircleButton1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton1.HoverState.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.Location = new System.Drawing.Point(109, 302);
-            this.guna2CircleButton1.Name = "guna2CircleButton1";
-            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton1.ShadowDecoration.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.Size = new System.Drawing.Size(72, 69);
-            this.guna2CircleButton1.TabIndex = 23;
-            this.guna2CircleButton1.Text = "GİRİŞ YAP";
-            this.guna2CircleButton1.Click += new System.EventHandler(this.guna2CircleButton1_Click);
+            this.btnGiris.BorderColor = System.Drawing.Color.Transparent;
+            this.btnGiris.CheckedState.Parent = this.btnGiris;
+            this.btnGiris.CustomImages.Parent = this.btnGiris;
+            this.btnGiris.DisabledState.Parent = this.btnGiris;
+            this.btnGiris.FillColor = System.Drawing.Color.DimGray;
+            this.btnGiris.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.btnGiris.ForeColor = System.Drawing.Color.White;
+            this.btnGiris.HoverState.Parent = this.btnGiris;
+            this.btnGiris.Location = new System.Drawing.Point(139, 373);
+            this.btnGiris.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGiris.Name = "btnGiris";
+            this.btnGiris.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnGiris.ShadowDecoration.Parent = this.btnGiris;
+            this.btnGiris.Size = new System.Drawing.Size(96, 85);
+            this.btnGiris.TabIndex = 23;
+            this.btnGiris.Text = "GİRİŞ YAP";
+            this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
             // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.BorderRadius = 100;
             this.guna2PictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.dha2_2;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(62, 1);
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(83, 1);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(169, 71);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(225, 87);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 13;
             this.guna2PictureBox1.TabStop = false;
             // 
             // KayitEkrani
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
-            this.ClientSize = new System.Drawing.Size(299, 383);
-            this.Controls.Add(this.guna2CircleButton1);
-            this.Controls.Add(this.guna2Button1);
+            this.ClientSize = new System.Drawing.Size(399, 471);
+            this.Controls.Add(this.btnGiris);
+            this.Controls.Add(this.btnkayitOl);
             this.Controls.Add(this.txtKayitKullaniciAd);
             this.Controls.Add(this.txtKayitTel);
             this.Controls.Add(this.txtKayitAdres);
@@ -342,7 +357,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.guna2ControlBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "KayitEkrani";
             this.Text = "KayitEkrani";
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
@@ -362,8 +377,8 @@ namespace WindowsFormsApp1
         private Guna.UI2.WinForms.Guna2TextBox txtKayitSifre;
         private Guna.UI2.WinForms.Guna2TextBox txtKayitTc;
         private Guna.UI2.WinForms.Guna2TextBox txtKayitSoyad;
-        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2CircleButton btnGiris;
+        private Guna.UI2.WinForms.Guna2Button btnkayitOl;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }

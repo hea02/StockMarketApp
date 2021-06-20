@@ -36,7 +36,9 @@ namespace WindowsFormsApp1
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridbakiye = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adminMoneyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.projetsDataSet = new WindowsFormsApp1.ProjetsDataSet();
             this.lblua = new System.Windows.Forms.Label();
@@ -48,33 +50,31 @@ namespace WindowsFormsApp1
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2DataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.dataGridsafe = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.safeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblSafeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblProductBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.tblProductTableAdapter = new WindowsFormsApp1.ProjetsDataSetTableAdapters.tblProductTableAdapter();
             this.adminMoneyTableAdapter = new WindowsFormsApp1.ProjetsDataSetTableAdapters.AdminMoneyTableAdapter();
-            this.tblSafeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblSafeTableAdapter = new WindowsFormsApp1.ProjetsDataSetTableAdapters.tblSafeTableAdapter();
-            this.safeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonAlım = new Guna.UI2.WinForms.Guna2GradientButton();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridbakiye)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminMoneyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projetsDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridsafe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblSafeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblProductBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tblSafeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dataGridbakiye);
             this.groupBox1.ForeColor = System.Drawing.Color.Yellow;
             this.groupBox1.Location = new System.Drawing.Point(618, 42);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -85,16 +85,16 @@ namespace WindowsFormsApp1
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "BAKİYE";
             // 
-            // dataGridView1
+            // dataGridbakiye
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Silver;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridbakiye.AutoGenerateColumns = false;
+            this.dataGridbakiye.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridbakiye.BackgroundColor = System.Drawing.Color.Silver;
+            this.dataGridbakiye.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridbakiye.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
-            this.dataGridView1.DataSource = this.adminMoneyBindingSource;
+            this.dataGridbakiye.DataSource = this.adminMoneyBindingSource;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -102,16 +102,30 @@ namespace WindowsFormsApp1
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 17);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(373, 199);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridUrunOnay_CellClick);
+            this.dataGridbakiye.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridbakiye.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridbakiye.Location = new System.Drawing.Point(3, 17);
+            this.dataGridbakiye.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridbakiye.Name = "dataGridbakiye";
+            this.dataGridbakiye.RowHeadersWidth = 51;
+            this.dataGridbakiye.RowTemplate.Height = 24;
+            this.dataGridbakiye.Size = new System.Drawing.Size(373, 199);
+            this.dataGridbakiye.TabIndex = 0;
+            this.dataGridbakiye.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridUrunOnay_CellClick);
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "UserID";
+            this.dataGridViewTextBoxColumn6.HeaderText = "UserID";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Money";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Money";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
             // adminMoneyBindingSource
             // 
@@ -197,16 +211,16 @@ namespace WindowsFormsApp1
             this.guna2ControlBox1.Size = new System.Drawing.Size(60, 36);
             this.guna2ControlBox1.TabIndex = 32;
             // 
-            // guna2DataGridView2
+            // dataGridsafe
             // 
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
-            this.guna2DataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.guna2DataGridView2.AutoGenerateColumns = false;
-            this.guna2DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.guna2DataGridView2.BackgroundColor = System.Drawing.Color.Silver;
-            this.guna2DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.guna2DataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.guna2DataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridsafe.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridsafe.AutoGenerateColumns = false;
+            this.dataGridsafe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridsafe.BackgroundColor = System.Drawing.Color.Silver;
+            this.dataGridsafe.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridsafe.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridsafe.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -214,11 +228,11 @@ namespace WindowsFormsApp1
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.guna2DataGridView2.ColumnHeadersHeight = 27;
-            this.guna2DataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridsafe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridsafe.ColumnHeadersHeight = 27;
+            this.dataGridsafe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.safeDataGridViewTextBoxColumn});
-            this.guna2DataGridView2.DataSource = this.tblSafeBindingSource;
+            this.dataGridsafe.DataSource = this.tblSafeBindingSource;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -226,13 +240,13 @@ namespace WindowsFormsApp1
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle4;
-            this.guna2DataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2DataGridView2.EnableHeadersVisualStyles = false;
-            this.guna2DataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
-            this.guna2DataGridView2.Location = new System.Drawing.Point(3, 17);
-            this.guna2DataGridView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2DataGridView2.Name = "guna2DataGridView2";
+            this.dataGridsafe.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridsafe.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridsafe.EnableHeadersVisualStyles = false;
+            this.dataGridsafe.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
+            this.dataGridsafe.Location = new System.Drawing.Point(3, 17);
+            this.dataGridsafe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridsafe.Name = "dataGridsafe";
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -240,36 +254,48 @@ namespace WindowsFormsApp1
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.guna2DataGridView2.RowHeadersVisible = false;
-            this.guna2DataGridView2.RowHeadersWidth = 51;
-            this.guna2DataGridView2.RowTemplate.Height = 24;
-            this.guna2DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView2.Size = new System.Drawing.Size(348, 199);
-            this.guna2DataGridView2.TabIndex = 1;
-            this.guna2DataGridView2.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Light;
-            this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
-            this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView2.ThemeStyle.BackColor = System.Drawing.Color.Silver;
-            this.guna2DataGridView2.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
-            this.guna2DataGridView2.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
-            this.guna2DataGridView2.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.guna2DataGridView2.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.guna2DataGridView2.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
-            this.guna2DataGridView2.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.guna2DataGridView2.ThemeStyle.HeaderStyle.Height = 27;
-            this.guna2DataGridView2.ThemeStyle.ReadOnly = false;
-            this.guna2DataGridView2.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView2.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.guna2DataGridView2.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.guna2DataGridView2.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.guna2DataGridView2.ThemeStyle.RowsStyle.Height = 24;
-            this.guna2DataGridView2.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            this.guna2DataGridView2.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.guna2DataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView2_CellClick);
+            this.dataGridsafe.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridsafe.RowHeadersVisible = false;
+            this.dataGridsafe.RowHeadersWidth = 51;
+            this.dataGridsafe.RowTemplate.Height = 24;
+            this.dataGridsafe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridsafe.Size = new System.Drawing.Size(348, 199);
+            this.dataGridsafe.TabIndex = 1;
+            this.dataGridsafe.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Light;
+            this.dataGridsafe.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            this.dataGridsafe.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dataGridsafe.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dataGridsafe.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dataGridsafe.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dataGridsafe.ThemeStyle.BackColor = System.Drawing.Color.Silver;
+            this.dataGridsafe.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
+            this.dataGridsafe.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            this.dataGridsafe.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridsafe.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dataGridsafe.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
+            this.dataGridsafe.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dataGridsafe.ThemeStyle.HeaderStyle.Height = 27;
+            this.dataGridsafe.ThemeStyle.ReadOnly = false;
+            this.dataGridsafe.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridsafe.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridsafe.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dataGridsafe.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dataGridsafe.ThemeStyle.RowsStyle.Height = 24;
+            this.dataGridsafe.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            this.dataGridsafe.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+          //  this.dataGridsafe.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView2_CellClick);
+            // 
+            // safeDataGridViewTextBoxColumn
+            // 
+            this.safeDataGridViewTextBoxColumn.DataPropertyName = "Safe";
+            this.safeDataGridViewTextBoxColumn.HeaderText = "Safe";
+            this.safeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.safeDataGridViewTextBoxColumn.Name = "safeDataGridViewTextBoxColumn";
+            // 
+            // tblSafeBindingSource
+            // 
+            this.tblSafeBindingSource.DataMember = "tblSafe";
+            this.tblSafeBindingSource.DataSource = this.projetsDataSet;
             // 
             // tblProductBindingSource
             // 
@@ -278,7 +304,7 @@ namespace WindowsFormsApp1
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.guna2DataGridView2);
+            this.groupBox2.Controls.Add(this.dataGridsafe);
             this.groupBox2.ForeColor = System.Drawing.Color.Yellow;
             this.groupBox2.Location = new System.Drawing.Point(151, 42);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -309,24 +335,6 @@ namespace WindowsFormsApp1
             this.label6.TabIndex = 40;
             this.label6.Text = "KULLANICI ID:";
             // 
-            // guna2Button3
-            // 
-            this.guna2Button3.CheckedState.Parent = this.guna2Button3;
-            this.guna2Button3.CustomImages.Parent = this.guna2Button3;
-            this.guna2Button3.DisabledState.Parent = this.guna2Button3;
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.HoverState.Parent = this.guna2Button3;
-            this.guna2Button3.Image = global::WindowsFormsApp1.Properties.Resources.ONAY;
-            this.guna2Button3.Location = new System.Drawing.Point(752, 407);
-            this.guna2Button3.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
-            this.guna2Button3.Size = new System.Drawing.Size(127, 26);
-            this.guna2Button3.TabIndex = 35;
-            this.guna2Button3.Text = "ONAYLA";
-            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
-            // 
             // guna2Button1
             // 
             this.guna2Button1.CheckedState.Parent = this.guna2Button1;
@@ -343,7 +351,7 @@ namespace WindowsFormsApp1
             this.guna2Button1.Size = new System.Drawing.Size(69, 28);
             this.guna2Button1.TabIndex = 33;
             this.guna2Button1.Text = "GERİ";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+          //  this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // tblProductTableAdapter
             // 
@@ -353,35 +361,28 @@ namespace WindowsFormsApp1
             // 
             this.adminMoneyTableAdapter.ClearBeforeFill = true;
             // 
-            // tblSafeBindingSource
-            // 
-            this.tblSafeBindingSource.DataMember = "tblSafe";
-            this.tblSafeBindingSource.DataSource = this.projetsDataSet;
-            // 
             // tblSafeTableAdapter
             // 
             this.tblSafeTableAdapter.ClearBeforeFill = true;
             // 
-            // safeDataGridViewTextBoxColumn
+            // buttonAlım
             // 
-            this.safeDataGridViewTextBoxColumn.DataPropertyName = "Safe";
-            this.safeDataGridViewTextBoxColumn.HeaderText = "Safe";
-            this.safeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.safeDataGridViewTextBoxColumn.Name = "safeDataGridViewTextBoxColumn";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "UserID";
-            this.dataGridViewTextBoxColumn6.HeaderText = "UserID";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Money";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Money";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.buttonAlım.BorderRadius = 10;
+            this.buttonAlım.CheckedState.Parent = this.buttonAlım;
+            this.buttonAlım.CustomImages.Parent = this.buttonAlım;
+            this.buttonAlım.DisabledState.Parent = this.buttonAlım;
+            this.buttonAlım.FillColor2 = System.Drawing.Color.Yellow;
+            this.buttonAlım.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonAlım.ForeColor = System.Drawing.Color.Black;
+            this.buttonAlım.HoverState.Parent = this.buttonAlım;
+            this.buttonAlım.Location = new System.Drawing.Point(731, 379);
+            this.buttonAlım.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonAlım.Name = "buttonAlım";
+            this.buttonAlım.ShadowDecoration.Parent = this.buttonAlım;
+            this.buttonAlım.Size = new System.Drawing.Size(168, 55);
+            this.buttonAlım.TabIndex = 43;
+            this.buttonAlım.Text = "Onayla";
+            this.buttonAlım.Click += new System.EventHandler(this.buttonAlım_Click);
             // 
             // AdminEkrani
             // 
@@ -389,9 +390,9 @@ namespace WindowsFormsApp1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(42)))));
             this.ClientSize = new System.Drawing.Size(1103, 463);
+            this.Controls.Add(this.buttonAlım);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.guna2Button3);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.lblup);
@@ -404,13 +405,13 @@ namespace WindowsFormsApp1
             this.Text = " ";
             this.Load += new System.EventHandler(this.AdminEkrani_Load);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridbakiye)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminMoneyBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projetsDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridsafe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblSafeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblProductBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tblSafeBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -419,7 +420,7 @@ namespace WindowsFormsApp1
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridbakiye;
     
         private System.Windows.Forms.Label lblua;
         private System.Windows.Forms.Label lblup;
@@ -435,7 +436,7 @@ namespace WindowsFormsApp1
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView2;
+        private Guna.UI2.WinForms.Guna2DataGridView dataGridsafe;
         private System.Windows.Forms.DataGridViewTextBoxColumn productNameDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn productAmountDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productPriceDataGridViewTextBoxColumn;
@@ -443,7 +444,7 @@ namespace WindowsFormsApp1
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button btnOnayla;
        // private ProjetsDataSetTableAdapters.AdminMoneyTableAdapter adminMoneyTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn userIDDataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn moneyDataGridViewTextBoxColumn;
@@ -461,5 +462,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn safeDataGridViewTextBoxColumn;
+        private Guna.UI2.WinForms.Guna2GradientButton buttonAlım;
     }
 }

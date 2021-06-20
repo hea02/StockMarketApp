@@ -167,13 +167,13 @@ namespace WindowsFormsApp1
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             float urunMiktar, urunFiyat;
-            if (guna2DataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            if (DataGridHareket.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
-                guna2DataGridView1.CurrentRow.Selected = true;
-                lblSaticiId.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["userIDDataGridViewTextBoxColumn"].FormattedValue.ToString();
-                lblSaticiUrunAd.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["productNameDataGridViewTextBoxColumn"].FormattedValue.ToString();
-                lblSaticiUrunMiktar.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["productAmountDataGridViewTextBoxColumn"].FormattedValue.ToString();
-                lblSaticiFiyat.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["productPriceDataGridViewTextBoxColumn"].FormattedValue.ToString();
+                DataGridHareket.CurrentRow.Selected = true;
+                lblSaticiId.Text = DataGridHareket.Rows[e.RowIndex].Cells["userIDDataGridViewTextBoxColumn"].FormattedValue.ToString();
+                lblSaticiUrunAd.Text = DataGridHareket.Rows[e.RowIndex].Cells["productNameDataGridViewTextBoxColumn"].FormattedValue.ToString();
+                lblSaticiUrunMiktar.Text = DataGridHareket.Rows[e.RowIndex].Cells["productAmountDataGridViewTextBoxColumn"].FormattedValue.ToString();
+                lblSaticiFiyat.Text = DataGridHareket.Rows[e.RowIndex].Cells["productPriceDataGridViewTextBoxColumn"].FormattedValue.ToString();
 
                 urunFiyat = Convert.ToSingle(lblSaticiFiyat.Text);
                 urunMiktar = Convert.ToSingle(lblSaticiUrunMiktar.Text);

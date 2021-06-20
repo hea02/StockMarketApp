@@ -19,14 +19,14 @@ namespace WindowsFormsApp1
         }
         SqlConnection baglanti = new SqlConnection(@"Data Source=desktop-6LL8GP9;Initial Catalog=Projets;Integrated Security=True");
 
-        private void guna2CircleButton1_Click(object sender, EventArgs e)
+        private void btnGiris_Click(object sender, EventArgs e)
         {
             Giris giris = new Giris();
             giris.Show();
             this.Hide();
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void btnkayitOl_Click(object sender, EventArgs e)
         {
 
             baglanti.Open();    //store proc
@@ -51,18 +51,5 @@ namespace WindowsFormsApp1
             giris.Show();
             this.Hide();
         }
-
-        //------------------------------------------------------------------------------------------------------------------------
-        /*
-         public void Fonksiyonlar()
-         {
-             //baglanti.Open();    //store proc
-             //SqlCommand komut = new SqlCommand(" select* from tblullanici", baglanti);
-             //SqlDataAdapter da = new SqlDataAdapter(komut); // databaseden verilerin aktarılır
-             //DataTable dt = new DataTable();  // tablo olusturarak
-             //da.Fill(dt);                     // verilen tabloya aktarılmasını saglıyoruz
-             //dataGridView1.DataSource = dt;        // bu tablo uı da gosterılır 
-             //baglanti.Close();
-         }*/
     }
 }

@@ -23,7 +23,7 @@ namespace WindowsFormsApp1
         }
         SqlConnection baglanti = new SqlConnection(@"Data Source=desktop-6LL8GP9;Initial Catalog=Projets;Integrated Security=True");
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnHareket_Click(object sender, EventArgs e)
         {
             
             baglanti.Open();
@@ -32,13 +32,13 @@ namespace WindowsFormsApp1
             SqlDataAdapter da = new SqlDataAdapter(data);
             System.Data.DataTable ds = new System.Data.DataTable();
             da.Fill(ds);
-            guna2DataGridView2.DataSource = ds;
+            dataGridHareket.DataSource = ds;
             baglanti.Close();
            
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnGeri_Click(object sender, EventArgs e)
         {
             SaticiEkrani bakiyeVeUrun = new SaticiEkrani(userId);
             bakiyeVeUrun.Show();
@@ -52,27 +52,21 @@ namespace WindowsFormsApp1
             app.Visible = true;
             Workbook kitap = app.Workbooks.Add(System.Reflection.Missing.Value);
             Worksheet sayfa = (Worksheet)kitap.Sheets[1];
-            for (int i=0; i< guna2DataGridView2.Columns.Count;i++)
+            for (int i=0; i< dataGridHareket.Columns.Count;i++)
             {
                 Range alan = (Range)sayfa.Cells[1, 1];
-                alan.Cells[1, i + 1] = guna2DataGridView2.Columns[i].HeaderText;
+                alan.Cells[1, i + 1] = dataGridHareket.Columns[i].HeaderText;
             }
-            for (int i = 0; i < guna2DataGridView2.Columns.Count; i++)
+            for (int i = 0; i < dataGridHareket.Columns.Count; i++)
             {
-                for (int j = 0; j < guna2DataGridView2.Columns.Count; j++)
+                for (int j = 0; j < dataGridHareket.Columns.Count; j++)
                 {
                     Range alan2 = (Range)sayfa.Cells[j + 1, i + 1];
-                    alan2.Cells[2,1]=guna2DataGridView2[i,j].Value;
+                    alan2.Cells[2,1]=dataGridHareket[i,j].Value;
                 }
             }
 
         }
 
-        private void UserGestures_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'projetsDataSet.tblHareketler' table. You can move, or remove it, as needed.
-            this.tblHareketlerTableAdapter.Fill(this.projetsDataSet.tblHareketler);
-
-        }
     }
 }

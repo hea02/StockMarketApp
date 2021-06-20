@@ -20,15 +20,7 @@ namespace WindowsFormsApp1
         }
        SqlConnection baglanti = new SqlConnection(@"Data Source=desktop-6LL8GP9;Initial Catalog=Projets;Integrated Security=True");
        
-
-       
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
-
-        private void btnGirisGirisYap_Click_1(object sender, EventArgs e)
+        private void btnGirisYap_Click_1(object sender, EventArgs e)
         {
             UserAdmin userAdmin = new UserAdmin();
 
@@ -67,7 +59,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void guna2Button3_Click(object sender, EventArgs e)
+        private void btnKayıt_Click(object sender, EventArgs e)
         {
             KayitEkrani kayitEkrani = new KayitEkrani();
             kayitEkrani.Show();

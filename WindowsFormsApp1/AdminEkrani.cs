@@ -36,60 +36,19 @@ namespace WindowsFormsApp1
 
         }
 
-        private void guna2DataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-           
-            if (guna2DataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex].Value!= null)
-            {
-                guna2DataGridView2.CurrentRow.Selected = true;
-                //lblAdi.Text= guna2DataGridView2.Rows[e.RowIndex].Cells["productNameDataGridViewTextBoxColumn1"].FormattedValue.ToString();
-                //lblUrunMiktar.Text = guna2DataGridView2.Rows[e.RowIndex].Cells["productAmountDataGridViewTextBoxColumn"].FormattedValue.ToString();
-                //lblurunFiyati.Text = guna2DataGridView2.Rows[e.RowIndex].Cells["productPriceDataGridViewTextBoxColumn"].FormattedValue.ToString();
-                //lblid.Text= guna2DataGridView2.Rows[e.RowIndex].Cells["userIDDataGridViewTextBoxColumn2"].FormattedValue.ToString();
-            }
-        }
-
       
         private void dataGridUrunOnay_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            if (dataGridbakiye.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
-                dataGridView1.CurrentRow.Selected = true;
-                lblua.Text = dataGridView1.Rows[e.RowIndex].Cells["User"].FormattedValue.ToString();
-                lblup.Text = dataGridView1.Rows[e.RowIndex].Cells["Money"].FormattedValue.ToString();  
+                dataGridbakiye.CurrentRow.Selected = true;
+                lblua.Text = dataGridbakiye.Rows[e.RowIndex].Cells["User"].FormattedValue.ToString();
+                lblup.Text = dataGridbakiye.Rows[e.RowIndex].Cells["Money"].FormattedValue.ToString();  
             }
             
         }
 
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            Giris giris = new Giris();
-            giris.Show();
-            this.Hide();
-        }
-
-        private void guna2Button2_Click(object sender, EventArgs e)
-        {
-            baglanti.Open();
-            SqlCommand komut = new SqlCommand(@"insert into tblProduct2 (ProductName,ProductAmount,ProductPrice,UserID) 
-            values(@productName,@productAmount,@productPrice,@userID)", baglanti);
-            //komut.Parameters.AddWithValue("@productName", lblAdi.Text);
-            //komut.Parameters.AddWithValue("@productAmount", Convert.ToSingle(lblUrunMiktar.Text));
-            //komut.Parameters.AddWithValue("@productPrice", Convert.ToSingle(lblurunFiyati.Text));
-            //komut.Parameters.AddWithValue("@userID", Convert.ToInt32(lblid.Text));
-            komut.ExecuteNonQuery();
-        
-            MessageBox.Show("Onay İşlemi Gerçekleşti.");
-            SqlCommand command = new SqlCommand(@"delete from tblProduct where ProductName=@productName", baglanti);
-         //   command.Parameters.AddWithValue("@productName", lblAdi.Text);
-            command.ExecuteNonQuery();
-            MessageBox.Show("Bekleme listesinden silinip onaylanmıstır.");
-         //   this.tblProductTableAdapter.Fill(this.projetsDataSet.tblProduct);
-            baglanti.Close();
-        }
-
-        private void guna2Button3_Click(object sender, EventArgs e)
+        private void buttonAlım_Click(object sender, EventArgs e)
         {
             baglanti.Open();
             SqlCommand komut = new SqlCommand("select UserID From tblAdminMoney2 where UserID=@userID", baglanti);
@@ -127,14 +86,8 @@ namespace WindowsFormsApp1
             command.ExecuteNonQuery();
             MessageBox.Show("Bekleme listesinden silinip onaylanmıstır.");
 
-          //  this.adminMoneyTableAdapter.Fill(this.projetsDataSet.AdminMoney);
+            //  this.adminMoneyTableAdapter.Fill(this.projetsDataSet.AdminMoney);
             baglanti.Close();
-
-        }
-
-        private void guna2Button4_Click(object sender, EventArgs e)
-        {
-           
         }
     }
 }

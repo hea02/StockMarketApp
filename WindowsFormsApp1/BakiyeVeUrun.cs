@@ -25,7 +25,7 @@ namespace WindowsFormsApp1
         }
         float gnclAliciBakiye = 0, gnclSaticiBakiye = 0, aliciBakiye;
         int saticiId;
-        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        private void UrunEkle_Click(object sender, EventArgs e)
         {
 
             int urunId,aliciId;
@@ -228,7 +228,7 @@ namespace WindowsFormsApp1
 
 
         }
-        private void guna2CircleButton1_Click(object sender, EventArgs e)
+        private void bakiyeEkle_Click(object sender, EventArgs e)
         {
             baglanti.Open();
             SqlCommand komut = new SqlCommand("insert into AdminMoney (Money,UserID) values (@Money, @UserID) ", baglanti);
@@ -238,14 +238,8 @@ namespace WindowsFormsApp1
             MessageBox.Show("Bakiye Ekleme Admin onayına gönderildi onaylandıktan sonra yayınlacaktır!");
             baglanti.Close();
         }     
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            Hareketler Hareketler = new Hareketler(userId);
-            Hareketler.Show();
-            this.Hide();
-        }
 
-        private void guna2Button2_Click(object sender, EventArgs e)
+        private void btnGeri_Click(object sender, EventArgs e)
         {
             Giris g = new Giris();
             g.Show();
@@ -271,7 +265,7 @@ namespace WindowsFormsApp1
             this.Hide();
         }
 
-        private void guna2GradientButton2_Click(object sender, EventArgs e)
+        private void buttonAlım_Click(object sender, EventArgs e)
         {
             int  urunId,saticiId;
             float urunTutar, aliciBakiye;
@@ -475,7 +469,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void guna2GradientButton3_Click(object sender, EventArgs e)
+        private void BakiyeDonustur_Click(object sender, EventArgs e)
         {
 
 
