@@ -191,7 +191,6 @@ namespace WindowsFormsApp1
                             com.ExecuteNonQuery();
                             // tablonun güncel versiyonunu gösterme yapılcak
 
-
                         }
                         else
                         {
