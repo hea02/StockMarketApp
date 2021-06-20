@@ -29,6 +29,7 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -38,18 +39,23 @@ namespace WindowsFormsApp1
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnexcel = new System.Windows.Forms.Button();
+            this.projetsDataSet = new WindowsFormsApp1.ProjetsDataSet();
+            this.tblHareketlerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tblHareketlerTableAdapter = new WindowsFormsApp1.ProjetsDataSetTableAdapters.tblHareketlerTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projetsDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblHareketlerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.guna2DataGridView2);
-            this.groupBox1.Location = new System.Drawing.Point(22, 54);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Location = new System.Drawing.Point(29, 66);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(522, 245);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(696, 302);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
@@ -83,8 +89,8 @@ namespace WindowsFormsApp1
             this.guna2DataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2DataGridView2.EnableHeadersVisualStyles = false;
             this.guna2DataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
-            this.guna2DataGridView2.Location = new System.Drawing.Point(2, 15);
-            this.guna2DataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2DataGridView2.Location = new System.Drawing.Point(3, 17);
+            this.guna2DataGridView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2DataGridView2.Name = "guna2DataGridView2";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
@@ -98,7 +104,7 @@ namespace WindowsFormsApp1
             this.guna2DataGridView2.RowHeadersWidth = 51;
             this.guna2DataGridView2.RowTemplate.Height = 24;
             this.guna2DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView2.Size = new System.Drawing.Size(518, 228);
+            this.guna2DataGridView2.Size = new System.Drawing.Size(690, 283);
             this.guna2DataGridView2.TabIndex = 3;
             this.guna2DataGridView2.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Light;
             this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
@@ -125,10 +131,10 @@ namespace WindowsFormsApp1
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(187, 303);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(249, 373);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 24);
+            this.button1.Size = new System.Drawing.Size(164, 30);
             this.button1.TabIndex = 4;
             this.button1.Text = "Hareketleri Göster";
             this.button1.UseVisualStyleBackColor = true;
@@ -136,10 +142,10 @@ namespace WindowsFormsApp1
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(31, 20);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Location = new System.Drawing.Point(41, 25);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(57, 29);
+            this.button2.Size = new System.Drawing.Size(76, 36);
             this.button2.TabIndex = 5;
             this.button2.Text = "Geri";
             this.button2.UseVisualStyleBackColor = true;
@@ -147,29 +153,46 @@ namespace WindowsFormsApp1
             // 
             // btnexcel
             // 
-            this.btnexcel.Location = new System.Drawing.Point(187, 331);
-            this.btnexcel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnexcel.Location = new System.Drawing.Point(249, 407);
+            this.btnexcel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnexcel.Name = "btnexcel";
-            this.btnexcel.Size = new System.Drawing.Size(123, 24);
+            this.btnexcel.Size = new System.Drawing.Size(164, 30);
             this.btnexcel.TabIndex = 6;
             this.btnexcel.Text = "Exel Aktar";
             this.btnexcel.UseVisualStyleBackColor = true;
             this.btnexcel.Click += new System.EventHandler(this.btnexcel_Click);
             // 
+            // projetsDataSet
+            // 
+            this.projetsDataSet.DataSetName = "ProjetsDataSet";
+            this.projetsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblHareketlerBindingSource
+            // 
+            this.tblHareketlerBindingSource.DataMember = "tblHareketler";
+            this.tblHareketlerBindingSource.DataSource = this.projetsDataSet;
+            // 
+            // tblHareketlerTableAdapter
+            // 
+            this.tblHareketlerTableAdapter.ClearBeforeFill = true;
+            // 
             // UserGestures
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnexcel);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UserGestures";
             this.Text = "UserGestures";
+            this.Load += new System.EventHandler(this.UserGestures_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projetsDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblHareketlerBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -181,5 +204,8 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnexcel;
+        private ProjetsDataSet projetsDataSet;
+        private System.Windows.Forms.BindingSource tblHareketlerBindingSource;
+        private ProjetsDataSetTableAdapters.tblHareketlerTableAdapter tblHareketlerTableAdapter;
     }
 }

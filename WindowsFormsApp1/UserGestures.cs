@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -9,7 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using Microsoft.Office.Interop.Excel;
-using excel= Microsoft.Office.Interop.Excel;
+
 
 
 namespace WindowsFormsApp1
@@ -26,28 +25,30 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             baglanti.Open();
-            SqlCommand data = new SqlCommand("select Tarih,UrunAd,UrunMiktar,UrunTutar  from tblHareketler where AliciID=@userId or SaticiID=@userId ", baglanti);
+            SqlCommand data = new SqlCommand("select Tarih,UrunAd,UrunMiktar,UrunTutar from tblHareketler where UserId=@userId ", baglanti);
             data.Parameters.AddWithValue("@userId", userId);
             SqlDataAdapter da = new SqlDataAdapter(data);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            guna2DataGridView2.DataSource = dt;
+            System.Data.DataTable ds = new System.Data.DataTable();
+            da.Fill(ds);
+            guna2DataGridView2.DataSource = ds;
             baglanti.Close();
-        }
+           
 
-      
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //BakiyeVeUrun bakiyeVeUrun = new BakiyeVeUrun();
-            //bakiyeVeUrun.Show();
-            //this.Hide();
+            SaticiEkrani bakiyeVeUrun = new SaticiEkrani(userId);
+            bakiyeVeUrun.Show();
+            this.Hide();
         }
 
         private void btnexcel_Click(object sender, EventArgs e)
         {
-            excel.Application app = new excel.Application();
+
+            Microsoft.Office.Interop.Excel.Application app = new Microsoft.Office.Interop.Excel.Application();
             app.Visible = true;
             Workbook kitap = app.Workbooks.Add(System.Reflection.Missing.Value);
             Worksheet sayfa = (Worksheet)kitap.Sheets[1];
@@ -64,6 +65,13 @@ namespace WindowsFormsApp1
                     alan2.Cells[2,1]=guna2DataGridView2[i,j].Value;
                 }
             }
+
+        }
+
+        private void UserGestures_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'projetsDataSet.tblHareketler' table. You can move, or remove it, as needed.
+            this.tblHareketlerTableAdapter.Fill(this.projetsDataSet.tblHareketler);
 
         }
     }

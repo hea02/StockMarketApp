@@ -162,8 +162,8 @@ namespace WindowsFormsApp1
 
 
                             SqlCommand command2 = new SqlCommand(@"
-                            insert into tblHareketler (AliciID,SaticiID,UrunID,AliciBakiye,SaticiBakiye,Tarih,UrunAd,UrunMiktar,UrunTutar)
-                            values(@aliciID,@saticiID,@urunID,@aliciBakiye,@saticiBakiye,@tarih,@urunAd,@urunMiktar,@urunTutar)", baglanti);
+                            insert into tblHareketler (AliciID,SaticiID,UrunID,AliciBakiye,SaticiBakiye,Tarih,UrunAd,UrunMiktar,UrunTutar,UserId)
+                            values(@aliciID,@saticiID,@urunID,@aliciBakiye,@saticiBakiye,@tarih,@urunAd,@urunMiktar,@urunTutar,@userId)", baglanti);
                             command2.Parameters.AddWithValue("@aliciID", aliciId);
                             command2.Parameters.AddWithValue("@saticiID", userId);
                             command2.Parameters.AddWithValue("@urunID", urunId);
@@ -173,6 +173,8 @@ namespace WindowsFormsApp1
                             command2.Parameters.AddWithValue("@urunAd", txtAdi.Text);
                             command2.Parameters.AddWithValue("@urunMiktar", Convert.ToSingle(txtMiktar.Text));
                             command2.Parameters.AddWithValue("@urunTutar", urunTutar);
+                            command2.Parameters.AddWithValue("@userId", userId);
+
 
                             command2.ExecuteNonQuery();
                             MessageBox.Show("Alıcının Bakiyesinden" + urunTutar + " lira saticinin bakiyesine gönderilmiştir.");
@@ -407,8 +409,8 @@ namespace WindowsFormsApp1
 
 
                             SqlCommand command2 = new SqlCommand(@"
-                            insert into tblHareketler (AliciID,SaticiID,UrunID,AliciBakiye,SaticiBakiye,Tarih,UrunAd,UrunMiktar,UrunTutar)
-                            values(@aliciID,@saticiID,@urunID,@aliciBakiye,@saticiBakiye,@tarih,@urunAd,@urunMiktar,@urunTutar)", baglanti);
+                            insert into tblHareketler (AliciID,SaticiID,UrunID,AliciBakiye,SaticiBakiye,Tarih,UrunAd,UrunMiktar,UrunTutar,UserId)
+                            values(@aliciID,@saticiID,@urunID,@aliciBakiye,@saticiBakiye,@tarih,@urunAd,@urunMiktar,@urunTutar,@userId)", baglanti);
                             command2.Parameters.AddWithValue("@aliciID", userId);
                             command2.Parameters.AddWithValue("@saticiID", saticiId);
                             command2.Parameters.AddWithValue("@urunID", urunId);
@@ -418,6 +420,8 @@ namespace WindowsFormsApp1
                             command2.Parameters.AddWithValue("@urunAd", txtUrunAdi.Text);
                             command2.Parameters.AddWithValue("@urunMiktar", Convert.ToSingle(txtUrunMiktar.Text));
                             command2.Parameters.AddWithValue("@urunTutar", urunTutar);
+                            command2.Parameters.AddWithValue("@userId", userId);
+
 
                             command2.ExecuteNonQuery();
                                 MessageBox.Show("Alıcının Bakiyesinden"+urunTutar+" lira saticinin bakiyesine gönderilmiştir.");
