@@ -186,9 +186,9 @@ namespace WindowsFormsApp1
                             "\nsaticiBakiye:" + gnclSaticiBakiye);
 
                             //// alınan ürünü satılanürün tablosundan silme
-                            //SqlCommand com = new SqlCommand(@" delete from tblProduct2 where ProductID=@productID", baglanti);
-                            //com.Parameters.AddWithValue("@productID", urunId);
-                            //com.ExecuteNonQuery();
+                            SqlCommand com = new SqlCommand(@" delete from tblProduct2 where ProductID=@productID", baglanti);
+                            com.Parameters.AddWithValue("@productID", urunId);
+                            com.ExecuteNonQuery();
                             // tablonun güncel versiyonunu gösterme yapılcak
 
 
@@ -426,13 +426,10 @@ namespace WindowsFormsApp1
                             "\naliciBakiye:" + guncelAliciBakiye +
                             "\nsaticiBakiye:" + guncelSaticiBakiye);
 
-                            //alınan ürünü satılanürün tablosundan silme
-                            //SqlCommand com = new SqlCommand(@" delete from tblProduct2 where ProductID=@productID", baglanti);
-                            //com.Parameters.AddWithValue("@productID", urunId);
-                            //com.ExecuteNonQuery();
-                            // tablonun güncel versiyonunu gösterme yapılcak
-
-                            
+                           // alınan ürünü satılanürün tablosundan silme
+                            SqlCommand com = new SqlCommand(@" delete from tblBuying where BuyID=@productID", baglanti);
+                            com.Parameters.AddWithValue("@productID", urunId);
+                            com.ExecuteNonQuery();
                             }
                             else
                             {
