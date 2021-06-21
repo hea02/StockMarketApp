@@ -61,11 +61,20 @@ namespace WindowsFormsApp1
                 myRange.Value2 = dataGridHareket.Columns[i].HeaderText;
 
             }
+            for (int i = 0; i < 1; i++)
+            {
+                for (int j = 0; j < dataGridHareket.Rows.Count-3; j++)
+                {
+                    Range myRange = (Range)sayfa.Cells[i + 1][j + 2]; // satır colon
+                    myRange.Value2 = dataGridHareket[i, j].Value.ToString(); //colon ve satır
+                    //MessageBox.Show("deger" + myRange);
+                }
+            }
             for (int i = 0; i < dataGridHareket.Columns.Count; i++)
             {
                 for (int j = 0; j < dataGridHareket.Rows.Count; j++)
                 {
-                    Range myRange = (Range)sayfa.Cells[i + 1][j + 2]; // satır colon
+                    Range myRange = (Range)sayfa.Cells[i +1][j +2 ]; // satır colon
                     myRange.Value2 = dataGridHareket[i, j].Value; //colon ve satır
                     //MessageBox.Show("deger" + myRange);
                 }
