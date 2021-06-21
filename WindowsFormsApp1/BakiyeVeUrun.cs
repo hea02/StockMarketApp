@@ -248,12 +248,11 @@ namespace WindowsFormsApp1
 
         private void SaticiEkrani_Load(object sender, EventArgs e)
         {
-            string bugun = "https://www.tcmb.gov.tr/kurlar/today.xml";
-            var xmldosya = new XmlDocument();
-            xmldosya.Load(bugun);
-
-            string dolaralis = xmldosya.SelectSingleNode("Tarih_Date/Currency[@Kod='USD']/BanknoteBuying").InnerXml;
-            lbldolar.Text = dolaralis;
+        //    string bugun = "https://www.tcmb.gov.tr/kurlar/today.xml";
+        //    var xmldosya = new XmlDocument();
+        //    xmldosya.Load(bugun);
+        //    string dolaralis = xmldosya.SelectSingleNode("Tarih_Date/Currency[@Kod='USD']/BanknoteBuying").InnerXml;
+        //    lbldolar.Text = dolaralis;
         }
         float guncelAliciBakiye=0, guncelSaticiBakiye=0;
 
