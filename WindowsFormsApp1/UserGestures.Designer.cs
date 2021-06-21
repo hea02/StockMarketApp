@@ -36,12 +36,14 @@ namespace WindowsFormsApp1
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grbHareket = new System.Windows.Forms.GroupBox();
             this.dataGridHareket = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.btnHareket = new System.Windows.Forms.Button();
-            this.btnGeri = new System.Windows.Forms.Button();
-            this.btnexcel = new System.Windows.Forms.Button();
             this.projetsDataSet = new WindowsFormsApp1.ProjetsDataSet();
             this.tblHareketlerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblHareketlerTableAdapter = new WindowsFormsApp1.ProjetsDataSetTableAdapters.tblHareketlerTableAdapter();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnHareket = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnexcel = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnGeri = new Guna.UI2.WinForms.Guna2Button();
             this.grbHareket.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridHareket)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projetsDataSet)).BeginInit();
@@ -55,10 +57,9 @@ namespace WindowsFormsApp1
             this.grbHareket.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grbHareket.Name = "grbHareket";
             this.grbHareket.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grbHareket.Size = new System.Drawing.Size(696, 302);
+            this.grbHareket.Size = new System.Drawing.Size(777, 302);
             this.grbHareket.TabIndex = 3;
             this.grbHareket.TabStop = false;
-            this.grbHareket.Text = "groupBox1";
             // 
             // dataGridHareket
             // 
@@ -104,7 +105,7 @@ namespace WindowsFormsApp1
             this.dataGridHareket.RowHeadersWidth = 51;
             this.dataGridHareket.RowTemplate.Height = 24;
             this.dataGridHareket.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridHareket.Size = new System.Drawing.Size(690, 283);
+            this.dataGridHareket.Size = new System.Drawing.Size(771, 283);
             this.dataGridHareket.TabIndex = 3;
             this.dataGridHareket.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Light;
             this.dataGridHareket.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
@@ -129,39 +130,6 @@ namespace WindowsFormsApp1
             this.dataGridHareket.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.dataGridHareket.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
-            // btnHareket
-            // 
-            this.btnHareket.Location = new System.Drawing.Point(249, 373);
-            this.btnHareket.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnHareket.Name = "btnHareket";
-            this.btnHareket.Size = new System.Drawing.Size(164, 30);
-            this.btnHareket.TabIndex = 4;
-            this.btnHareket.Text = "Hareketleri Göster";
-            this.btnHareket.UseVisualStyleBackColor = true;
-            this.btnHareket.Click += new System.EventHandler(this.btnHareket_Click);
-            // 
-            // btnGeri
-            // 
-            this.btnGeri.Location = new System.Drawing.Point(41, 25);
-            this.btnGeri.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnGeri.Name = "btnGeri";
-            this.btnGeri.Size = new System.Drawing.Size(76, 36);
-            this.btnGeri.TabIndex = 5;
-            this.btnGeri.Text = "Geri";
-            this.btnGeri.UseVisualStyleBackColor = true;
-            this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click);
-            // 
-            // btnexcel
-            // 
-            this.btnexcel.Location = new System.Drawing.Point(249, 407);
-            this.btnexcel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnexcel.Name = "btnexcel";
-            this.btnexcel.Size = new System.Drawing.Size(164, 30);
-            this.btnexcel.TabIndex = 6;
-            this.btnexcel.Text = "Exel Aktar";
-            this.btnexcel.UseVisualStyleBackColor = true;
-            this.btnexcel.Click += new System.EventHandler(this.btnexcel_Click);
-            // 
             // projetsDataSet
             // 
             this.projetsDataSet.DataSetName = "ProjetsDataSet";
@@ -176,16 +144,73 @@ namespace WindowsFormsApp1
             // 
             this.tblHareketlerTableAdapter.ClearBeforeFill = true;
             // 
+            // btnHareket
+            // 
+            this.btnHareket.BorderRadius = 10;
+            this.btnHareket.CheckedState.Parent = this.btnHareket;
+            this.btnHareket.CustomImages.Parent = this.btnHareket;
+            this.btnHareket.DisabledState.Parent = this.btnHareket;
+            this.btnHareket.FillColor2 = System.Drawing.Color.Yellow;
+            this.btnHareket.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold);
+            this.btnHareket.ForeColor = System.Drawing.Color.Black;
+            this.btnHareket.HoverState.Parent = this.btnHareket;
+            this.btnHareket.Location = new System.Drawing.Point(277, 393);
+            this.btnHareket.Margin = new System.Windows.Forms.Padding(4);
+            this.btnHareket.Name = "btnHareket";
+            this.btnHareket.ShadowDecoration.Parent = this.btnHareket;
+            this.btnHareket.Size = new System.Drawing.Size(291, 29);
+            this.btnHareket.TabIndex = 43;
+            this.btnHareket.Text = "Hareketleri Göster";
+            this.btnHareket.Click += new System.EventHandler(this.btnHareket_Click_1);
+            // 
+            // btnexcel
+            // 
+            this.btnexcel.BorderRadius = 10;
+            this.btnexcel.CheckedState.Parent = this.btnexcel;
+            this.btnexcel.CustomImages.Parent = this.btnexcel;
+            this.btnexcel.DisabledState.Parent = this.btnexcel;
+            this.btnexcel.FillColor2 = System.Drawing.Color.Yellow;
+            this.btnexcel.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold);
+            this.btnexcel.ForeColor = System.Drawing.Color.Black;
+            this.btnexcel.HoverState.Parent = this.btnexcel;
+            this.btnexcel.Location = new System.Drawing.Point(277, 430);
+            this.btnexcel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnexcel.Name = "btnexcel";
+            this.btnexcel.ShadowDecoration.Parent = this.btnexcel;
+            this.btnexcel.Size = new System.Drawing.Size(291, 29);
+            this.btnexcel.TabIndex = 44;
+            this.btnexcel.Text = "Exel Aktar";
+            this.btnexcel.Click += new System.EventHandler(this.btnexcel_Click_1);
+            // 
+            // btnGeri
+            // 
+            this.btnGeri.CheckedState.Parent = this.btnGeri;
+            this.btnGeri.CustomImages.Parent = this.btnGeri;
+            this.btnGeri.DisabledState.Parent = this.btnGeri;
+            this.btnGeri.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnGeri.ForeColor = System.Drawing.Color.White;
+            this.btnGeri.HoverState.Parent = this.btnGeri;
+            this.btnGeri.Image = global::WindowsFormsApp1.Properties.Resources.geriiiiiii;
+            this.btnGeri.Location = new System.Drawing.Point(32, 13);
+            this.btnGeri.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGeri.Name = "btnGeri";
+            this.btnGeri.ShadowDecoration.Parent = this.btnGeri;
+            this.btnGeri.Size = new System.Drawing.Size(69, 28);
+            this.btnGeri.TabIndex = 45;
+            this.btnGeri.Text = "GERİ";
+            this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click_1);
+            // 
             // UserGestures
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnexcel);
+            this.ClientSize = new System.Drawing.Size(863, 493);
             this.Controls.Add(this.btnGeri);
+            this.Controls.Add(this.btnexcel);
             this.Controls.Add(this.btnHareket);
             this.Controls.Add(this.grbHareket);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UserGestures";
             this.Text = "UserGestures";
@@ -201,11 +226,13 @@ namespace WindowsFormsApp1
 
         private System.Windows.Forms.GroupBox grbHareket;
         private Guna.UI2.WinForms.Guna2DataGridView dataGridHareket;
-        private System.Windows.Forms.Button btnHareket;
-        private System.Windows.Forms.Button btnGeri;
-        private System.Windows.Forms.Button btnexcel;
         private ProjetsDataSet projetsDataSet;
         private System.Windows.Forms.BindingSource tblHareketlerBindingSource;
         private ProjetsDataSetTableAdapters.tblHareketlerTableAdapter tblHareketlerTableAdapter;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2GradientButton btnHareket;
+        private Guna.UI2.WinForms.Guna2GradientButton btnexcel;
+        private Guna.UI2.WinForms.Guna2Button btnGeri;
     }
 }

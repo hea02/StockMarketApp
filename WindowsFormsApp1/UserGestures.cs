@@ -25,10 +25,8 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
         SqlConnection baglanti = new SqlConnection(@"Data Source=desktop-6LL8GP9;Initial Catalog=Projets;Integrated Security=True");
-
-        private void btnHareket_Click(object sender, EventArgs e)
+        private void btnHareket_Click_1(object sender, EventArgs e)
         {
-            
             baglanti.Open();
             SqlCommand data = new SqlCommand("select Tarih,UrunAd,UrunMiktar,UrunTutar from tblHareketler where UserId=@userId ", baglanti);
             data.Parameters.AddWithValue("@userId", userId);
@@ -37,20 +35,10 @@ namespace WindowsFormsApp1
             da.Fill(ds);
             dataGridHareket.DataSource = ds;
             baglanti.Close();
-           
-
         }
 
-        private void btnGeri_Click(object sender, EventArgs e)
+        private void btnexcel_Click_1(object sender, EventArgs e)
         {
-            SaticiEkrani bakiyeVeUrun = new SaticiEkrani(userId);
-            bakiyeVeUrun.Show();
-            this.Hide();
-        }
-
-        private void btnexcel_Click(object sender, EventArgs e)
-        {
-
             Microsoft.Office.Interop.Excel.Application app = new Microsoft.Office.Interop.Excel.Application();
             app.Visible = true;
             Workbook kitap = app.Workbooks.Add(System.Reflection.Missing.Value);
@@ -63,25 +51,32 @@ namespace WindowsFormsApp1
             }
             for (int i = 0; i < 1; i++)
             {
-                for (int j = 0; j < dataGridHareket.Rows.Count-3; j++)
+                for (int j = 0; j < dataGridHareket.Rows.Count - 3; j++)
                 {
                     Range myRange = (Range)sayfa.Cells[i + 1][j + 2]; // satır colon
                     myRange.Value2 = dataGridHareket[i, j].Value.ToString(); //colon ve satır
-                    
+
                 }
             }
             for (int i = 0; i < dataGridHareket.Columns.Count; i++)
             {
                 for (int j = 0; j < dataGridHareket.Rows.Count; j++)
                 {
-                    Range myRange = (Range)sayfa.Cells[i +1][j +2 ]; // satır colon
+                    Range myRange = (Range)sayfa.Cells[i + 1][j + 2]; // satır colon
                     myRange.Value2 = dataGridHareket[i, j].Value; //colon ve satır
-                  
+
                 }
             }
 
         }
 
+        private void btnGeri_Click_1(object sender, EventArgs e)
+        {
+
+            SaticiEkrani bakiyeVeUrun = new SaticiEkrani(userId);
+            bakiyeVeUrun.Show();
+            this.Hide();
+        }
     }
 }
 
