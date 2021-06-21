@@ -67,7 +67,7 @@ namespace WindowsFormsApp1
                 {
                     Range myRange = (Range)sayfa.Cells[i + 1][j + 2]; // satır colon
                     myRange.Value2 = dataGridHareket[i, j].Value.ToString(); //colon ve satır
-                    //MessageBox.Show("deger" + myRange);
+                    
                 }
             }
             for (int i = 0; i < dataGridHareket.Columns.Count; i++)
@@ -76,7 +76,7 @@ namespace WindowsFormsApp1
                 {
                     Range myRange = (Range)sayfa.Cells[i +1][j +2 ]; // satır colon
                     myRange.Value2 = dataGridHareket[i, j].Value; //colon ve satır
-                    //MessageBox.Show("deger" + myRange);
+                  
                 }
             }
 
