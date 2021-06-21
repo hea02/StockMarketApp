@@ -112,6 +112,7 @@ namespace WindowsFormsApp1
             this.dataGridbakiye.Size = new System.Drawing.Size(373, 199);
             this.dataGridbakiye.TabIndex = 0;
             this.dataGridbakiye.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridUrunOnay_CellClick);
+            this.dataGridbakiye.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridbakiye_CellContentClick);
             // 
             // dataGridViewTextBoxColumn6
             // 
@@ -283,7 +284,6 @@ namespace WindowsFormsApp1
             this.dataGridsafe.ThemeStyle.RowsStyle.Height = 24;
             this.dataGridsafe.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.dataGridsafe.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-          //  this.dataGridsafe.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView2_CellClick);
             // 
             // safeDataGridViewTextBoxColumn
             // 
@@ -351,7 +351,7 @@ namespace WindowsFormsApp1
             this.guna2Button1.Size = new System.Drawing.Size(69, 28);
             this.guna2Button1.TabIndex = 33;
             this.guna2Button1.Text = "GERİ";
-          //  this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // tblProductTableAdapter
             // 

@@ -43,9 +43,8 @@ namespace WindowsFormsApp1
             {
                 dataGridbakiye.CurrentRow.Selected = true;
                 lblua.Text = dataGridbakiye.Rows[e.RowIndex].Cells["User"].FormattedValue.ToString();
-                lblup.Text = dataGridbakiye.Rows[e.RowIndex].Cells["Money"].FormattedValue.ToString();  
+                lblup.Text = dataGridbakiye.Rows[e.RowIndex].Cells["Money"].FormattedValue.ToString();
             }
-            
         }
 
         private void buttonAlım_Click(object sender, EventArgs e)
@@ -88,6 +87,17 @@ namespace WindowsFormsApp1
 
             //  this.adminMoneyTableAdapter.Fill(this.projetsDataSet.AdminMoney);
             baglanti.Close();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            Giris giris = new Giris();
+            giris.Show();
+            this.Hide();
+        }
+
+        private void dataGridbakiye_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
         }
     }
 }

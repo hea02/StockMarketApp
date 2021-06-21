@@ -59,7 +59,7 @@ namespace WindowsFormsApp1
                 if (dataReader.Read())
                 {
                     aliciBakiye = Convert.ToSingle(dataReader["MoneyAmount"]);
-                    MessageBox.Show("alici bakiye =" + aliciBakiye);
+                   // MessageBox.Show("alici bakiye =" + aliciBakiye);
                     dataReader.Close();
                 }
                 else
@@ -75,10 +75,10 @@ namespace WindowsFormsApp1
                 if (oku.Read())
                 {
                     saticiBakiye = Convert.ToSingle(oku["MoneyAmount"]);
-                    MessageBox.Show("satici bakiye =" + saticiBakiye);
+                   // MessageBox.Show("satici bakiye =" + saticiBakiye);
 
                     //MessageBox.Show("alıcı bakiye:" + bakiye);
-                    MessageBox.Show("urun tutar  =" + urunTutar);
+                   // MessageBox.Show("urun tutar  =" + urunTutar);
                     oku.Close();
 
 
@@ -98,9 +98,9 @@ namespace WindowsFormsApp1
                         {
 
                             urunId = Convert.ToInt32(veriokuma["ProductID"]);
-                            MessageBox.Show(" satici id:" + userId);
-                            MessageBox.Show("alici id =" + aliciId);
-                            MessageBox.Show("urun id:" + urunId);
+                            //MessageBox.Show(" satici id:" + userId);
+                            //MessageBox.Show("alici id =" + aliciId);
+                            //MessageBox.Show("urun id:" + urunId);
                             veriokuma.Close();
                             MessageBox.Show(" Para transferi gercekleşiyor...");
 
@@ -129,7 +129,7 @@ namespace WindowsFormsApp1
                             if (data3oku.Read())
                             {
                                 gnclAliciBakiye = Convert.ToSingle(data3oku["MoneyAmount"]);
-                                MessageBox.Show(" güncel alici bakiye =" + gnclAliciBakiye);
+                               // MessageBox.Show(" güncel alici bakiye =" + gnclAliciBakiye);
                                 data3oku.Close();
                             }
                             MessageBox.Show("alici id" + aliciId);
@@ -142,7 +142,7 @@ namespace WindowsFormsApp1
                             if (data4oku.Read())
                             {
                                 gnclSaticiBakiye = Convert.ToSingle(data4oku["MoneyAmount"]);
-                                MessageBox.Show(" güncel satici bakiye =" + gnclSaticiBakiye);
+                              //  MessageBox.Show(" güncel satici bakiye =" + gnclSaticiBakiye);
                                 data4oku.Close();
 
                             }
@@ -153,7 +153,7 @@ namespace WindowsFormsApp1
                             data5.Parameters.Add("@safe",SqlDbType.Float);
                             data5.Parameters["@safe"].Value = urunTutar / 100;
                             data5.ExecuteNonQuery();
-                            MessageBox.Show("kasaya düşen 1% lik tutar = " + urunTutar / 100);
+                          //  MessageBox.Show("kasaya düşen 1% lik tutar = " + urunTutar / 100);
 
                             // tarih hesaplama
                             DateTime tarih;
@@ -178,12 +178,12 @@ namespace WindowsFormsApp1
 
                             command2.ExecuteNonQuery();
                             MessageBox.Show("Alıcının Bakiyesinden" + urunTutar + " lira saticinin bakiyesine gönderilmiştir.");
-                            MessageBox.Show(
-                            "aliciID:" + aliciId +
-                            "\nsaticiID:" + userId +
-                            "\nurunID:" + urunId +
-                            "\naliciBakiye:" + gnclAliciBakiye +
-                            "\nsaticiBakiye:" + gnclSaticiBakiye);
+                            //MessageBox.Show(
+                            //"aliciID:" + aliciId +
+                            //"\nsaticiID:" + userId +
+                            //"\nurunID:" + urunId +
+                            //"\naliciBakiye:" + gnclAliciBakiye +
+                            //"\nsaticiBakiye:" + gnclSaticiBakiye);
 
                             //// alınan ürünü satılanürün tablosundan silme
                             SqlCommand com = new SqlCommand(@" delete from tblProduct2 where ProductID=@productID", baglanti);
@@ -282,8 +282,8 @@ namespace WindowsFormsApp1
             {
 
                 saticiId = Convert.ToInt32(dr["ReceiverID"]);
-                MessageBox.Show("satici id =" + saticiId);
-                MessageBox.Show("al sat işlemi yapılabilinir urun bulundu");
+               // MessageBox.Show("satici id =" + saticiId);
+                MessageBox.Show("Almak İstediğiniz ürün sistemde bulunmustur.Alım islemi gerçekleşiyor.Lütfen bekleyiniz...");
                 urunTutar = Convert.ToSingle(dr["UrunTutar"]);
                 dr.Close();
                 // alici bilgi alma işlemleri
@@ -297,7 +297,7 @@ namespace WindowsFormsApp1
                 if (dataReader.Read())
                 {
                     saticiBakiye = Convert.ToSingle(dataReader["MoneyAmount"]);
-                    MessageBox.Show("satici bakiye =" + saticiBakiye);
+                  //  MessageBox.Show("satici bakiye =" + saticiBakiye);
                     stcBakiye = saticiBakiye;
                     dataReader.Close();
                 }
@@ -314,7 +314,7 @@ namespace WindowsFormsApp1
                 if (oku.Read())
                 {
                     aliciBakiye = Convert.ToSingle(oku["MoneyAmount"]);
-                    MessageBox.Show("alici bakiye =" + aliciBakiye);
+                   // MessageBox.Show("alici bakiye =" + aliciBakiye);
                     
                     //MessageBox.Show("alıcı bakiye:" + bakiye);
                     MessageBox.Show("urun tutar  =" + urunTutar);
@@ -337,9 +337,9 @@ namespace WindowsFormsApp1
                             {
 
                             urunId = Convert.ToInt32(veriokuma["BuyID"]);
-                                MessageBox.Show(" satici id:" + saticiId);
-                                MessageBox.Show("alici id =" + userId);
-                               MessageBox.Show("urun id:"+urunId);
+                               // MessageBox.Show(" satici id:" + saticiId);
+                               // MessageBox.Show("alici id =" + userId);
+                               //MessageBox.Show("urun id:"+urunId);
                                 veriokuma.Close();
                             MessageBox.Show(" Para transferi gercekleşiyor..." );
                            
@@ -368,10 +368,10 @@ namespace WindowsFormsApp1
                             if (data3oku.Read())
                             {
                                 guncelAliciBakiye = Convert.ToSingle(data3oku["MoneyAmount"]);
-                                MessageBox.Show(" güncel alici bakiye =" + guncelAliciBakiye);
+                             //   MessageBox.Show(" güncel alici bakiye =" + guncelAliciBakiye);
                                 data3oku.Close();
                             }
-                            MessageBox.Show("satici id" + saticiId);
+                           // MessageBox.Show("satici id" + saticiId);
                             //güncel satici bakiye 
                             SqlCommand data4 = new SqlCommand(@"select MoneyAmount from tblAdminMoney2  where UserID = @userID ", baglanti);
                      
@@ -381,7 +381,7 @@ namespace WindowsFormsApp1
                             if (data4oku.Read())
                             {
                                 guncelSaticiBakiye = Convert.ToSingle(data4oku["MoneyAmount"]);
-                                MessageBox.Show(" güncel satici bakiye =" + guncelSaticiBakiye);
+                             //   MessageBox.Show(" güncel satici bakiye =" + guncelSaticiBakiye);
                                 data4oku.Close();
 
                             }
@@ -391,7 +391,7 @@ namespace WindowsFormsApp1
                             data5.Parameters.Add("@safe", SqlDbType.Float);
                             data5.Parameters["@safe"].Value = urunTutar / 100;
                             data5.ExecuteNonQuery();
-                            MessageBox.Show("kasaya düşen 1% lik tutar = " + urunTutar / 100);
+                          //  MessageBox.Show("kasaya düşen 1% lik tutar = " + urunTutar / 100);
 
                             // tarih hesaplama
                             DateTime tarih;
@@ -417,12 +417,12 @@ namespace WindowsFormsApp1
 
                             command2.ExecuteNonQuery();
                                 MessageBox.Show("Alıcının Bakiyesinden"+urunTutar+" lira saticinin bakiyesine gönderilmiştir.");
-                            MessageBox.Show(
-                            "aliciID:" + userId +
-                            "\nsaticiID:" + saticiId +
-                            "\nurunID:" + urunId +
-                            "\naliciBakiye:" + guncelAliciBakiye +
-                            "\nsaticiBakiye:" + guncelSaticiBakiye);
+                            //MessageBox.Show(
+                            //"aliciID:" + userId +
+                            //"\nsaticiID:" + saticiId +
+                            //"\nurunID:" + urunId +
+                            //"\naliciBakiye:" + guncelAliciBakiye +
+                            //"\nsaticiBakiye:" + guncelSaticiBakiye);
 
                            // alınan ürünü satılanürün tablosundan silme
                             SqlCommand com = new SqlCommand(@" delete from tblBuying where BuyID=@productID", baglanti);
