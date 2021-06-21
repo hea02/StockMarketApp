@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using Microsoft.Office.Interop.Excel;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
 
 
 
@@ -64,10 +67,9 @@ namespace WindowsFormsApp1
                 {
                     Range myRange = (Range)sayfa.Cells[i + 1][j + 2]; // satır colon
                     myRange.Value2 = dataGridHareket[i, j].Value; //colon ve satır
-                    MessageBox.Show("deger" + myRange);
+                    //MessageBox.Show("deger" + myRange);
                 }
             }
-
 
         }
 
