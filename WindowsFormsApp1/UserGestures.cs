@@ -52,21 +52,24 @@ namespace WindowsFormsApp1
             app.Visible = true;
             Workbook kitap = app.Workbooks.Add(System.Reflection.Missing.Value);
             Worksheet sayfa = (Worksheet)kitap.Sheets[1];
-            for (int i=0; i< dataGridHareket.Columns.Count;i++)
+            for (int i = 0; i < dataGridHareket.Columns.Count; i++)
             {
-                Range alan = (Range)sayfa.Cells[1, 1];
-                alan.Cells[1, i + 1] = dataGridHareket.Columns[i].HeaderText;
+                Range myRange = (Range)sayfa.Cells[i+1][1];
+                myRange.Value2 = dataGridHareket.Columns[i].HeaderText;
+            
             }
             for (int i = 0; i < dataGridHareket.Columns.Count; i++)
             {
-                for (int j = 0; j < dataGridHareket.Columns.Count; j++)
+                for (int j = 0; j < dataGridHareket.Rows.Count; j++)
                 {
-                    Range alan2 = (Range)sayfa.Cells[j + 1, i + 1];
-                    alan2.Cells[2,1]=dataGridHareket[i,j].Value;
+                    Range myRange = (Range)sayfa.Cells[i + 1][j + 2]; // satır colon
+                    myRange.Value2 = dataGridHareket[i, j].Value; //colon ve satır
                 }
             }
+           
 
         }
 
     }
 }
+
