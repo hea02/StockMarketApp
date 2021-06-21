@@ -112,7 +112,7 @@ namespace WindowsFormsApp1
             this.dataGridbakiye.Size = new System.Drawing.Size(373, 199);
             this.dataGridbakiye.TabIndex = 0;
             this.dataGridbakiye.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridUrunOnay_CellClick);
-            this.dataGridbakiye.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridbakiye_CellContentClick);
+           // this.dataGridbakiye.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridbakiye_CellContentClick);
             // 
             // dataGridViewTextBoxColumn6
             // 

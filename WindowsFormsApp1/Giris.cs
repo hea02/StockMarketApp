@@ -35,7 +35,6 @@ namespace WindowsFormsApp1
             {
 
                 id = Convert.ToInt32(dr["UserID"]);
-                MessageBox.Show("giriş yapıldı id:" + id);
                 SaticiEkrani saticiEkrani = new SaticiEkrani(id);
                 saticiEkrani.Show();
                 this.Hide();
@@ -59,7 +58,9 @@ namespace WindowsFormsApp1
 
         }
 
-        private void btnKayıt_Click(object sender, EventArgs e)
+      
+
+        private void btnKayıt_Click_1(object sender, EventArgs e)
         {
             KayitEkrani kayitEkrani = new KayitEkrani();
             kayitEkrani.Show();

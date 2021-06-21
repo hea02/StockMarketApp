@@ -175,7 +175,6 @@ namespace WindowsFormsApp1
             this.guna2Button1.Size = new System.Drawing.Size(51, 37);
             this.guna2Button1.TabIndex = 36;
             this.guna2Button1.Text = "X";
-            //this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // guna2Button2
             // 
@@ -213,7 +212,7 @@ namespace WindowsFormsApp1
             this.btnKayıt.Size = new System.Drawing.Size(107, 33);
             this.btnKayıt.TabIndex = 38;
             this.btnKayıt.Text = "Kayıt Ol";
-           // this.btnKayıt.Click += new System.EventHandler(this.guna2Button3_Click);
+            this.btnKayıt.Click += new System.EventHandler(this.btnKayıt_Click_1);
             // 
             // PictureBoxGiris
             // 

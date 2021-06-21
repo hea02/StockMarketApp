@@ -96,8 +96,5 @@ namespace WindowsFormsApp1
             this.Hide();
         }
 
-        private void dataGridbakiye_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
     }
 }

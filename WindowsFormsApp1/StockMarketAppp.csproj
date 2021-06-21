@@ -73,12 +73,6 @@
     <Compile Include="Giris.Designer.cs">
       <DependentUpon>Giris.cs</DependentUpon>
     </Compile>
-    <Compile Include="Hareketler.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Hareketler.Designer.cs">
-      <DependentUpon>Hareketler.cs</DependentUpon>
-    </Compile>
     <Compile Include="KayitEkrani.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,9 +106,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Giris.resx">
       <DependentUpon>Giris.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Hareketler.resx">
-      <DependentUpon>Hareketler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KayitEkrani.resx">
       <DependentUpon>KayitEkrani.cs</DependentUpon>
